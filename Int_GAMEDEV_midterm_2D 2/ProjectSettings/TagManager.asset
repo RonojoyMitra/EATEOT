@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Mushroom
   - bounce
+  - Ground
   layers:
   - Default
   - TransparentFX
