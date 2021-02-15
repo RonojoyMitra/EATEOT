@@ -12,138 +12,132 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     float maxWalkSpeed;
 
-    [Header("Gravity")]
-    [SerializeField]
-    float gravityAcceloration;
-    float gravityForce = 0f;
-    [SerializeField]
-    float maxGravityForce;
-    [SerializeField]
-    Vector2 leftGroundCheckOrigin, rightGroundCheckOrigin;
-    [SerializeField]
-    float groundCheckDistance;
-
-    enum JumpState { CAN_JUMP, JUMPING, FALLING };
+    public enum JumpStatus { CAN_JUMP, JUMP_FLAG, HOLDING, FALLING };
     [Header("Jumping")]
     [SerializeField]
-    JumpState jumpState;
-    bool jumpFlag;
+    JumpStatus jumpStatus;
     [SerializeField]
-    float initialJumpForce;
+    float jumpInitialForce;
     [SerializeField]
-    float jumpDeadening, jumpDeadeningSlow;
-    float jumpDeadeningForce;
-    float jumpForce;
+    float jumpHoldForce;
+    [SerializeField]
+    float coyoteTime;
+    bool jumpBuffer;    // Jump buffering allows the player to hit the jump button just before they hit the ground and then jump right as they land
+    [SerializeField]
+    float jumpBufferTime;
+    float jumpBufferTimer;
+
+    [Header("Ground Checking")]
+    [SerializeField]
+    Vector2 leftGCOrigin;
+    [SerializeField]
+    Vector2 rightGCOrigin;
+    [SerializeField]
+    float gcDistance;
+
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void Update()
+    void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
-            jumpFlag = true;
+        // Walking
+        transform.Translate(Vector3.right * maxWalkSpeed * walkCurve.Evaluate(Input.GetAxis("Horizontal")) * Time.deltaTime);
+
+        // Makes sure the jump buffer timer is ticking
+        if(jumpBuffer)
+        {
+            jumpBufferTimer -= Time.deltaTime;
+            if (jumpBufferTimer <= 0f)
+            {
+                jumpBuffer = false;
+            }
+        }
+
+        // Jump status switching
+        switch(jumpStatus)
+        {
+            // If you can jump and you press a jump key set the jump flag so physics can handle the jump
+            case JumpStatus.CAN_JUMP:
+                if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || jumpBuffer)
+                {
+                    jumpStatus = JumpStatus.JUMP_FLAG;
+                    jumpBuffer = false;
+                }
+                // If the player walks off the edge while they can jump we start coyote time
+                else if(GroundCheck() == false)
+                {
+                    StartCoroutine(StartCoyoteTime());
+                }
+                break;
+            // If you're in the state of holding down the jump and you release both the jump keys you lose all additional jump forces
+            // You also start falling if your velocity is negative
+            case JumpStatus.HOLDING:
+                if((!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.UpArrow)) || rb.velocity.y <= 0)
+                {
+                    jumpStatus = JumpStatus.FALLING;
+                }
+                break;
+            case JumpStatus.FALLING:
+                if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))   // Activate the jump buffer if the player hits jump while falling
+                {
+                    jumpBuffer = true;
+                    jumpBufferTimer = jumpBufferTime;
+                }
+                if (GroundCheck()) jumpStatus = JumpStatus.CAN_JUMP;    // if the player hits the ground the return to the Can Jump state
+                break;
+        }
     }
 
     void FixedUpdate()
     {
-        if (!OnGround() && (jumpState == JumpState.CAN_JUMP))
+        // If the jump flag is set we set the jump state to holding and apply an impulse
+        if (jumpStatus == JumpStatus.JUMP_FLAG)
         {
-            jumpState = JumpState.FALLING;
+            // Zero the velocity because the player can jump buffer and they may still technically have velocity from falling
+            rb.velocity = Vector2.zero;
+            rb.angularVelocity = 0f;
+            jumpStatus = JumpStatus.HOLDING;    // set the new status to holding
+            rb.AddForce(Vector2.up * jumpInitialForce, ForceMode2D.Impulse);    // apply the initial force
         }
-
-        if (jumpState == JumpState.FALLING)
-            Gravity();
-
-        if (jumpFlag && jumpState == JumpState.CAN_JUMP)
+        else if(jumpStatus == JumpStatus.HOLDING)   // While the player is holding we just apply a constant force so they get a little more height
         {
-            jumpFlag = false;
-            Jump();
-        }
-        if (jumpState == JumpState.JUMPING)
-        {
-            JumpDeaden();
-        }
-
-        rb.MovePosition(TargetPosition());
-
-        if (OnGround() && jumpState == JumpState.FALLING)
-        {
-            jumpState = JumpState.CAN_JUMP;
+            rb.AddForce(Vector2.up * jumpHoldForce, ForceMode2D.Force);
         }
     }
 
-    void Jump()
+    // Allows the player to jump for a brief moment after the walk off a platform
+    IEnumerator StartCoyoteTime()
     {
-        jumpState = JumpState.JUMPING;
-        jumpForce = initialJumpForce;
-        jumpDeadeningForce = 0f;
-    }
-
-    void JumpDeaden()
-    {
-        if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+        // Wait for a number of seconds
+        // This is the period which they should still be able to jump
+        yield return new WaitForSeconds(coyoteTime);
+        // Once the coyote time is over
+        // If the player is still able to jump and they are still not on the ground the are falling
+        if (GroundCheck() == false && jumpStatus == JumpStatus.CAN_JUMP)
         {
-            jumpDeadeningForce += jumpDeadeningSlow * Time.deltaTime;
-        }
-        else
-        {
-            jumpDeadeningForce += jumpDeadening * Time.deltaTime;
-        }
-        jumpForce -= jumpDeadeningForce;
-        if (jumpForce < 0)
-        {
-            jumpState = JumpState.FALLING;
+            jumpStatus = JumpStatus.FALLING;
         }
     }
 
-    void Gravity()
+    // Detect if the player is standing on the ground.
+    // Sends raycasts from the lower left and right of the player to check for anything tagged "Ground".
+    bool GroundCheck()
     {
-        if (!OnGround())
-        {
-            gravityForce += Time.deltaTime * gravityAcceloration;
-        }
-        else
-        {
-            gravityForce = 0f;
-        }
-        if (gravityForce > maxGravityForce) gravityForce = maxGravityForce;
-    }
-
-    bool OnGround()
-    {
-        // Raycast from both left and right bottom corners to check if we are on a platform
-        RaycastHit2D l = Physics2D.Raycast(rb.position + leftGroundCheckOrigin, Vector2.down, groundCheckDistance);
-        RaycastHit2D r = Physics2D.Raycast(rb.position + rightGroundCheckOrigin, Vector2.down, groundCheckDistance);
+        RaycastHit2D l = Physics2D.Raycast(rb.position + leftGCOrigin, Vector2.down, gcDistance);
+        RaycastHit2D r = Physics2D.Raycast(rb.position + rightGCOrigin, Vector2.down, gcDistance);
         if (l.collider != null)
         {
-            if (l.collider.CompareTag("Ground")) return true;
+            if (l.collider.CompareTag("Ground"))
+                return true;
         }
         if (r.collider != null)
-            if (r.collider.CompareTag("Ground")) return true;
-        return false;
-    }
-
-    Vector2 TargetPosition()
-    {
-        // Get the base position of the player
-        Vector2 t = rb.position;
-
-        // Apply horizontal movement from walking
-        float w = maxWalkSpeed * walkCurve.Evaluate(Input.GetAxis("Horizontal")) * Time.deltaTime;
-        t += Vector2.right * w;
-
-        if(jumpState == JumpState.JUMPING)
         {
-            t += Vector2.up * jumpForce * Time.deltaTime;
+            if (r.collider.CompareTag("Ground"))
+                return true;
         }
-
-        // Apply the gravity force
-        if (jumpState == JumpState.FALLING) 
-            t += Vector2.down * gravityForce;
-        
-        // Return the target position
-        return t;
+        return false;
     }
 }
