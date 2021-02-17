@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
+
     Rigidbody2D rb;
 
     [Header("Horizontal Movement")]
@@ -27,6 +29,7 @@ public class PlayerController : MonoBehaviour
     float jumpBufferTime;
     float jumpBufferTimer;
 
+    bool grounded = false;
     [Header("Ground Checking")]
     [SerializeField]
     Vector2 leftGCOrigin;
@@ -35,16 +38,31 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     float gcDistance;
 
+    public enum Direction { LEFT, RIGHT };
+    Direction facing = Direction.RIGHT;
+    bool grabbing = false;
+    bool grabFlag = false;
+    [Header("Push and Pull")]
+    [SerializeField]
+    Transform grabbedBox;
+    [SerializeField]
+    float wallCheckDistance;
+    [SerializeField]
+    float wallCheckOffset;
+    [SerializeField]
+    float extraGrabbingWallCheckOffset;
 
     private void Start()
     {
+        instance = this;
         rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
         // Walking
-        transform.Translate(Vector3.right * maxWalkSpeed * walkCurve.Evaluate(Input.GetAxis("Horizontal")) * Time.deltaTime);
+        if((Input.GetAxis("Horizontal") > float.Epsilon && !WallCheck(Direction.RIGHT)) || (Input.GetAxis("Horizontal") < Mathf.Epsilon && !WallCheck(Direction.LEFT)))
+            transform.Translate(Vector3.right * maxWalkSpeed * walkCurve.Evaluate(Input.GetAxis("Horizontal")) * Time.deltaTime);
 
         // Makes sure the jump buffer timer is ticking
         if(jumpBuffer)
@@ -63,11 +81,14 @@ public class PlayerController : MonoBehaviour
             case JumpStatus.CAN_JUMP:
                 if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || jumpBuffer)
                 {
-                    jumpStatus = JumpStatus.JUMP_FLAG;
-                    jumpBuffer = false;
+                    if(!grabbing)
+                    {
+                        jumpStatus = JumpStatus.JUMP_FLAG;
+                        jumpBuffer = false;
+                    }
                 }
                 // If the player walks off the edge while they can jump we start coyote time
-                else if(GroundCheck() == false)
+                else if(grounded == false && !grabbing)
                 {
                     StartCoroutine(StartCoyoteTime());
                 }
@@ -86,13 +107,29 @@ public class PlayerController : MonoBehaviour
                     jumpBuffer = true;
                     jumpBufferTimer = jumpBufferTime;
                 }
-                if (GroundCheck()) jumpStatus = JumpStatus.CAN_JUMP;    // if the player hits the ground the return to the Can Jump state
+                if (grounded) jumpStatus = JumpStatus.CAN_JUMP;    // if the player hits the ground the return to the Can Jump state
                 break;
+        }
+
+        if(!grabbing)
+        {
+            if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) && !(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)))
+                facing = Direction.RIGHT;
+            if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && !(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
+                facing = Direction.RIGHT;
+        }
+
+        // Grab input
+        if(Input.GetKeyDown(KeyCode.Space) && !grabFlag)
+        {
+            grabFlag = true;
         }
     }
 
     void FixedUpdate()
     {
+        grounded = GroundCheck();
+
         // If the jump flag is set we set the jump state to holding and apply an impulse
         if (jumpStatus == JumpStatus.JUMP_FLAG)
         {
@@ -105,6 +142,19 @@ public class PlayerController : MonoBehaviour
         else if(jumpStatus == JumpStatus.HOLDING)   // While the player is holding we just apply a constant force so they get a little more height
         {
             rb.AddForce(Vector2.up * jumpHoldForce, ForceMode2D.Force);
+        }
+
+        if(grabFlag)
+        {
+            grabFlag = false;
+            if (!grabbing)
+            {
+                TryGrab();
+            }
+            else
+            {
+                TryRelease();
+            }
         }
     }
 
@@ -139,5 +189,55 @@ public class PlayerController : MonoBehaviour
                 return true;
         }
         return false;
+    }
+
+    bool WallCheck(Direction direction)
+    {
+        Vector2 o = transform.position;
+        if (!grabbing)
+        {
+            o += direction == Direction.LEFT ? Vector2.left * wallCheckOffset : Vector2.right * wallCheckOffset;
+        }
+        else
+        {
+            if (direction == Direction.LEFT && facing == Direction.LEFT)
+                o += Vector2.left * (wallCheckOffset + grabbedBox.GetComponent<BoxCollider2D>().size.x * grabbedBox.lossyScale.x + extraGrabbingWallCheckOffset);
+            else if (direction == Direction.LEFT && facing == Direction.RIGHT)
+                o += Vector2.left * wallCheckOffset;
+            else if (direction == Direction.RIGHT && facing == Direction.RIGHT)
+                o += Vector2.right * (wallCheckOffset + grabbedBox.GetComponent<BoxCollider2D>().size.x * grabbedBox.lossyScale.x + extraGrabbingWallCheckOffset);
+            else if (direction == Direction.RIGHT && facing == Direction.LEFT)
+                o += Vector2.right * wallCheckOffset;
+        }
+        Debug.DrawRay(o, Vector3.up);
+        Vector2 d = direction == Direction.LEFT ? Vector2.left : Vector2.right;
+        RaycastHit2D h = Physics2D.Raycast(o, d, wallCheckDistance);
+        if (h.collider == null) return false;
+        return true;
+    }
+
+    void TryGrab()
+    {
+        Vector2 o = transform.position;
+        o += facing == Direction.LEFT ? Vector2.left * wallCheckOffset : Vector2.right * wallCheckOffset;
+        Vector2 d = facing == Direction.LEFT ? Vector2.left : Vector2.right;
+        RaycastHit2D h = Physics2D.Raycast(o, d, wallCheckDistance);
+        if (h.collider == null)
+        {
+            return;
+        }
+        if(h.collider.CompareTag("Box"))
+        {
+            grabbing = true;
+            grabbedBox = h.collider.transform;
+            grabbedBox.parent = transform;
+        }
+    }
+
+    void TryRelease()
+    {
+        grabbedBox.parent = null;
+        grabbing = false;
+        grabbedBox = null;
     }
 }
