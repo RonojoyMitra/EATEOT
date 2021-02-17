@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance;
+
     Rigidbody2D rb;
 
     [Header("Horizontal Movement")]
@@ -38,6 +40,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        instance = this;
         rb = GetComponent<Rigidbody2D>();
     }
 
