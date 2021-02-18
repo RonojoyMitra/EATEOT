@@ -298,6 +298,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   maxWalkSpeed: 4
+  grabbingWalkSpeedMulti: 0.5
   jumpStatus: 0
   jumpInitialForce: 10
   jumpHoldForce: 12

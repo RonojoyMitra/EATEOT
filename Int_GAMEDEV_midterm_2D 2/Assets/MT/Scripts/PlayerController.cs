@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     AnimationCurve walkCurve;
     [SerializeField]
     float maxWalkSpeed;
+    [SerializeField]
+    float grabbingWalkSpeedMulti;
 
     public enum JumpStatus { CAN_JUMP, JUMP_FLAG, HOLDING, FALLING };
     [Header("Jumping")]
@@ -61,8 +63,13 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // Walking
-        if((Input.GetAxis("Horizontal") > 0f && !WallCheck(Direction.RIGHT)) || (Input.GetAxis("Horizontal") < 0f && !WallCheck(Direction.LEFT)))
-            transform.Translate(Vector3.right * maxWalkSpeed * walkCurve.Evaluate(Input.GetAxis("Horizontal")) * Time.deltaTime);
+        if ((Input.GetAxis("Horizontal") > 0f && !WallCheck(Direction.RIGHT)) || (Input.GetAxis("Horizontal") < 0f && !WallCheck(Direction.LEFT)))
+        {
+            // gm is the grabbing multiplier
+            // If the player is not grabbing they walk at full speed, and if they are they walk at a multiplied speed
+            float gm = grabbing ? grabbingWalkSpeedMulti : 1f;
+            transform.Translate(Vector3.right * maxWalkSpeed * walkCurve.Evaluate(Input.GetAxis("Horizontal")) * Time.deltaTime * gm);
+        }
 
         // Makes sure the jump buffer timer is ticking
         if(jumpBuffer)
