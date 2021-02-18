@@ -156,6 +156,15 @@ public class PlayerController : MonoBehaviour
                 TryRelease();
             }
         }
+
+        // Box falls if not supported
+        if (grabbing)
+        {
+            if (grabbedBox.GetComponent<BoxController>().IsGrounded == false)
+            {
+                TryRelease();
+            }
+        }
     }
 
     // Allows the player to jump for a brief moment after the walk off a platform
