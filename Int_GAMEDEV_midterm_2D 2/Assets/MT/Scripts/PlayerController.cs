@@ -55,6 +55,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     float extraGrabbingWallCheckOffset; // The extra offset used when holding a box
 
+    string[] groundTags = { "Ground", "Box" }; 
+
     private void Start()
     {
         instance = this;    // Set the singleton
@@ -178,6 +180,10 @@ public class PlayerController : MonoBehaviour
             {
                 TryRelease();
             }
+            if (grabbedBox.GetComponent<Rigidbody2D>().velocity.y - rb.velocity.y > 0.1f || grabbedBox.GetComponent<Rigidbody2D>().velocity.y - rb.velocity.y < -0.1f)
+            {
+                TryRelease();
+            }
         }
     }
 
@@ -203,13 +209,22 @@ public class PlayerController : MonoBehaviour
         RaycastHit2D r = Physics2D.Raycast(rb.position + rightGCOrigin, Vector2.down, gcDistance);
         if (l.collider != null)
         {
-            if (l.collider.CompareTag("Ground"))
+            if (GroundTagCheck(l.collider.tag))
                 return true;
         }
         if (r.collider != null)
         {
-            if (r.collider.CompareTag("Ground"))
+            if (GroundTagCheck(r.collider.tag))
                 return true;
+        }
+        return false;
+    }
+
+    bool GroundTagCheck(string t)
+    {
+        for (int i = 0; i < groundTags.Length; i++)
+        {
+            if (t == groundTags[i]) return true;
         }
         return false;
     }
