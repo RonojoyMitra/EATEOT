@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // Walking
-        if((Input.GetAxis("Horizontal") > float.Epsilon && !WallCheck(Direction.RIGHT)) || (Input.GetAxis("Horizontal") < Mathf.Epsilon && !WallCheck(Direction.LEFT)))
+        if((Input.GetAxis("Horizontal") > 0f && !WallCheck(Direction.RIGHT)) || (Input.GetAxis("Horizontal") < 0f && !WallCheck(Direction.LEFT)))
             transform.Translate(Vector3.right * maxWalkSpeed * walkCurve.Evaluate(Input.GetAxis("Horizontal")) * Time.deltaTime);
 
         // Makes sure the jump buffer timer is ticking
@@ -116,7 +116,7 @@ public class PlayerController : MonoBehaviour
             if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) && !(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)))
                 facing = Direction.RIGHT;
             if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && !(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
-                facing = Direction.RIGHT;
+                facing = Direction.LEFT;
         }
 
         // Grab input
