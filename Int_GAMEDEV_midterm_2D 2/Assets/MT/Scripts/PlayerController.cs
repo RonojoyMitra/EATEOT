@@ -4,30 +4,33 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public static PlayerController instance;
+    public static PlayerController instance;    // Singleton identifier so other scripts can get a reference to the player
 
-    Rigidbody2D rb;
+    Rigidbody2D rb; // the rigidbody attatched to the player
 
     [Header("Horizontal Movement")]
     [SerializeField]
-    AnimationCurve walkCurve;
+    AnimationCurve walkCurve;   // The curve that controls how the walking winds up
     [SerializeField]
-    float maxWalkSpeed;
+    float maxWalkSpeed; // The maximum speed the player can walk
+    [SerializeField]
+    [Range(0f,1f)]
+    float grabbingWalkSpeedMulti;   // When holding a box the player walks at a percent of normal speed
 
     public enum JumpStatus { CAN_JUMP, JUMP_FLAG, HOLDING, FALLING };
     [Header("Jumping")]
     [SerializeField]
-    JumpStatus jumpStatus;
+    JumpStatus jumpStatus;  // The current status of if the player is jumping
     [SerializeField]
-    float jumpInitialForce;
+    float jumpInitialForce; // Initial force applied when the player presses the jump key
     [SerializeField]
-    float jumpHoldForce;
+    float jumpHoldForce;    // The ongoing force applied when the player continues to hold the jump key
     [SerializeField]
-    float coyoteTime;
+    float coyoteTime;   // The amount of time after the player walks off a platform that they can still jump
     bool jumpBuffer;    // Jump buffering allows the player to hit the jump button just before they hit the ground and then jump right as they land
     [SerializeField]
-    float jumpBufferTime;
-    float jumpBufferTimer;
+    float jumpBufferTime;   // The time before landing that the player is able to jump
+    float jumpBufferTimer;  // Timer for the jump buffer
 
     bool grounded = false;
     [Header("Ground Checking")]
@@ -39,30 +42,37 @@ public class PlayerController : MonoBehaviour
     float gcDistance;
 
     public enum Direction { LEFT, RIGHT };
-    Direction facing = Direction.RIGHT;
-    bool grabbing = false;
-    bool grabFlag = false;
+    Direction facing = Direction.RIGHT; // The direction the player is facing
+    bool grabbing = false;  // Is the player grabbing
+    bool grabFlag = false;  // Flag used to mark the player is trying to grab/release something
     [Header("Push and Pull")]
     [SerializeField]
-    Transform grabbedBox;
+    Transform grabbedBox;   // The box that is currently grabbed
     [SerializeField]
-    float wallCheckDistance;
+    float wallCheckDistance;    // The distance the player looks ahead of them to check for walls
     [SerializeField]
-    float wallCheckOffset;
+    float wallCheckOffset;  // The offset from the center of the player to check for walls
     [SerializeField]
-    float extraGrabbingWallCheckOffset;
+    float extraGrabbingWallCheckOffset; // The extra offset used when holding a box
+
+    string[] groundTags = { "Ground", "Box" }; 
 
     private void Start()
     {
-        instance = this;
-        rb = GetComponent<Rigidbody2D>();
+        instance = this;    // Set the singleton
+        rb = GetComponent<Rigidbody2D>();   // Get reference to the rigidbody
     }
 
     void Update()
     {
         // Walking
-        if((Input.GetAxis("Horizontal") > float.Epsilon && !WallCheck(Direction.RIGHT)) || (Input.GetAxis("Horizontal") < Mathf.Epsilon && !WallCheck(Direction.LEFT)))
-            transform.Translate(Vector3.right * maxWalkSpeed * walkCurve.Evaluate(Input.GetAxis("Horizontal")) * Time.deltaTime);
+        if ((Input.GetAxis("Horizontal") > 0f && !WallCheck(Direction.RIGHT)) || (Input.GetAxis("Horizontal") < 0f && !WallCheck(Direction.LEFT)))
+        {
+            // gm is the grabbing multiplier
+            // If the player is not grabbing they walk at full speed, and if they are they walk at a multiplied speed
+            float gm = grabbing ? grabbingWalkSpeedMulti : 1f;
+            transform.Translate(Vector3.right * maxWalkSpeed * walkCurve.Evaluate(Input.GetAxis("Horizontal")) * Time.deltaTime * gm);
+        }
 
         // Makes sure the jump buffer timer is ticking
         if(jumpBuffer)
@@ -101,6 +111,8 @@ public class PlayerController : MonoBehaviour
                     jumpStatus = JumpStatus.FALLING;
                 }
                 break;
+            // If the player is falling and they press a jump key they start the jump buffer
+            // If they have become grounded they change to the CAN_JUMP state
             case JumpStatus.FALLING:
                 if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))   // Activate the jump buffer if the player hits jump while falling
                 {
@@ -111,12 +123,14 @@ public class PlayerController : MonoBehaviour
                 break;
         }
 
+        // Change the direction the player is facing while they are not grabbing on to a box
+        // The player does not change directions while grabbing a box
         if(!grabbing)
         {
             if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) && !(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)))
                 facing = Direction.RIGHT;
             if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && !(Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
-                facing = Direction.RIGHT;
+                facing = Direction.LEFT;
         }
 
         // Grab input
@@ -128,6 +142,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        // Update whether the player is on the ground
         grounded = GroundCheck();
 
         // If the jump flag is set we set the jump state to holding and apply an impulse
@@ -144,14 +159,28 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(Vector2.up * jumpHoldForce, ForceMode2D.Force);
         }
 
+        // If the player is trying to grab
         if(grabFlag)
         {
-            grabFlag = false;
+            grabFlag = false;   // turn off the grab flag
             if (!grabbing)
             {
-                TryGrab();
+                TryGrab();  // Grab if we're not
             }
             else
+            {
+                TryRelease();   // Release if we are
+            }
+        }
+
+        // Box falls if not supported
+        if (grabbing)
+        {
+            if (grabbedBox.GetComponent<BoxController>().IsGrounded == false)
+            {
+                TryRelease();
+            }
+            if (grabbedBox.GetComponent<Rigidbody2D>().velocity.y - rb.velocity.y > 0.1f || grabbedBox.GetComponent<Rigidbody2D>().velocity.y - rb.velocity.y < -0.1f)
             {
                 TryRelease();
             }
@@ -180,20 +209,33 @@ public class PlayerController : MonoBehaviour
         RaycastHit2D r = Physics2D.Raycast(rb.position + rightGCOrigin, Vector2.down, gcDistance);
         if (l.collider != null)
         {
-            if (l.collider.CompareTag("Ground"))
+            if (GroundTagCheck(l.collider.tag))
                 return true;
         }
         if (r.collider != null)
         {
-            if (r.collider.CompareTag("Ground"))
+            if (GroundTagCheck(r.collider.tag))
                 return true;
         }
         return false;
     }
 
+    bool GroundTagCheck(string t)
+    {
+        for (int i = 0; i < groundTags.Length; i++)
+        {
+            if (t == groundTags[i]) return true;
+        }
+        return false;
+    }
+
+    // Checks if there is a wall in front of the player
+    // This is useful to stop the player from jittering while up against a wall
+    // It also takes into acount the width of the box while grabbing one
     bool WallCheck(Direction direction)
     {
-        Vector2 o = transform.position;
+        Vector2 o = transform.position; // The origin for the raycast
+        // The origin is adjusted based on the width of the player and the width of the box if the player is holding one
         if (!grabbing)
         {
             o += direction == Direction.LEFT ? Vector2.left * wallCheckOffset : Vector2.right * wallCheckOffset;
@@ -209,23 +251,26 @@ public class PlayerController : MonoBehaviour
             else if (direction == Direction.RIGHT && facing == Direction.LEFT)
                 o += Vector2.right * wallCheckOffset;
         }
-        Debug.DrawRay(o, Vector3.up);
         Vector2 d = direction == Direction.LEFT ? Vector2.left : Vector2.right;
         RaycastHit2D h = Physics2D.Raycast(o, d, wallCheckDistance);
         if (h.collider == null) return false;
         return true;
     }
 
+    // Attempt to grab a box in front of the player
     void TryGrab()
     {
+        // Raycast in front of the player
         Vector2 o = transform.position;
         o += facing == Direction.LEFT ? Vector2.left * wallCheckOffset : Vector2.right * wallCheckOffset;
         Vector2 d = facing == Direction.LEFT ? Vector2.left : Vector2.right;
         RaycastHit2D h = Physics2D.Raycast(o, d, wallCheckDistance);
+        // If there is no collision detected we just return
         if (h.collider == null)
         {
             return;
         }
+        // If the collider is a box we grab it
         if(h.collider.CompareTag("Box"))
         {
             grabbing = true;
@@ -234,10 +279,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // Attempt to release the current grabbed box
     void TryRelease()
     {
-        grabbedBox.parent = null;
-        grabbing = false;
-        grabbedBox = null;
+        grabbedBox.parent = null;   // Unparent the box
+        grabbing = false;   // Mark that we are not grabbing
+        grabbedBox = null;  // Release the reference to the grabbed box
     }
 }
