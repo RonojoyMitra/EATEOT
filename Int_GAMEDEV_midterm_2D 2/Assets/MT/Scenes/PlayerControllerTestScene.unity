@@ -458,52 +458,8 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7707337706547910057, guid: f7ebb0a647e434e419abb6d4553dcdaa, type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7707337706547910057, guid: f7ebb0a647e434e419abb6d4553dcdaa, type: 3}
-      propertyPath: m_Size.y
-      value: 1.1515151
-      objectReference: {fileID: 0}
-    - target: {fileID: 7707337706547910057, guid: f7ebb0a647e434e419abb6d4553dcdaa, type: 3}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7707337706547910057, guid: f7ebb0a647e434e419abb6d4553dcdaa, type: 3}
-      propertyPath: m_Offset.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7707337706547910057, guid: f7ebb0a647e434e419abb6d4553dcdaa, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7707337706547910057, guid: f7ebb0a647e434e419abb6d4553dcdaa, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.1515151
-      objectReference: {fileID: 0}
-    - target: {fileID: 7707337706547910060, guid: f7ebb0a647e434e419abb6d4553dcdaa, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 8322534308881483960, guid: 04b26ae880d257645b4290479180b822, type: 3}
-    - target: {fileID: 7707337706547910061, guid: f7ebb0a647e434e419abb6d4553dcdaa, type: 3}
-      propertyPath: debugMode
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7707337706547910063, guid: f7ebb0a647e434e419abb6d4553dcdaa, type: 3}
       propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7707337706547910063, guid: f7ebb0a647e434e419abb6d4553dcdaa, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7707337706547910063, guid: f7ebb0a647e434e419abb6d4553dcdaa, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7707337706547910063, guid: f7ebb0a647e434e419abb6d4553dcdaa, type: 3}
-      propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7707337706547910063, guid: f7ebb0a647e434e419abb6d4553dcdaa, type: 3}
