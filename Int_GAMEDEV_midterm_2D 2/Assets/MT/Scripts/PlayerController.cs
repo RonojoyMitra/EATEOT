@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    // Debugging options
+    public enum DebugMode { OFF, DRAW_RAYS, DRAW_RAYS_WITH_DISTANCE };
+    [SerializeField]
+    DebugMode debugMode = DebugMode.OFF;
+    // Debugging colors
+    Color groundCheckColor = new Color(165f/255f, 42f / 255f, 42f / 255f);
+    Color wallCheckColor = Color.magenta;
+    Color grabColor = Color.yellow;
+
     public static PlayerController instance;    // Singleton identifier so other scripts can get a reference to the player
 
     Rigidbody2D rb; // the rigidbody attatched to the player
@@ -207,6 +216,20 @@ public class PlayerController : MonoBehaviour
     {
         RaycastHit2D l = Physics2D.Raycast(rb.position + leftGCOrigin, Vector2.down, gcDistance);
         RaycastHit2D r = Physics2D.Raycast(rb.position + rightGCOrigin, Vector2.down, gcDistance);
+        
+        // If debugging is on we should draw the ground checking rays
+        switch(debugMode)
+        {
+            case DebugMode.DRAW_RAYS:
+                Debug.DrawRay(rb.position + leftGCOrigin, Vector3.down, groundCheckColor);
+                Debug.DrawRay(rb.position + rightGCOrigin, Vector3.down, groundCheckColor);
+                break;
+            case DebugMode.DRAW_RAYS_WITH_DISTANCE:
+                Debug.DrawRay(rb.position + leftGCOrigin, Vector3.down * gcDistance, groundCheckColor);
+                Debug.DrawRay(rb.position + rightGCOrigin, Vector3.down * gcDistance, groundCheckColor);
+                break;
+        }
+
         if (l.collider != null)
         {
             if (GroundTagCheck(l.collider.tag))
@@ -253,6 +276,18 @@ public class PlayerController : MonoBehaviour
         }
         Vector2 d = direction == Direction.LEFT ? Vector2.left : Vector2.right;
         RaycastHit2D h = Physics2D.Raycast(o, d, wallCheckDistance);
+
+        // Debugging
+        switch(debugMode)
+        {
+            case DebugMode.DRAW_RAYS:
+                Debug.DrawRay(o, d, wallCheckColor);
+                break;
+            case DebugMode.DRAW_RAYS_WITH_DISTANCE:
+                Debug.DrawRay(o, d * wallCheckDistance, wallCheckColor);
+                break;
+        }
+
         if (h.collider == null) return false;
         return true;
     }
@@ -264,6 +299,18 @@ public class PlayerController : MonoBehaviour
         Vector2 o = transform.position;
         o += facing == Direction.LEFT ? Vector2.left * wallCheckOffset : Vector2.right * wallCheckOffset;
         Vector2 d = facing == Direction.LEFT ? Vector2.left : Vector2.right;
+
+        // Debugging
+        switch(debugMode)
+        {
+            case DebugMode.DRAW_RAYS:
+                Debug.DrawRay(o, d, grabColor);
+                break;
+            case DebugMode.DRAW_RAYS_WITH_DISTANCE:
+                Debug.DrawRay(o, d * wallCheckDistance, grabColor);
+                break;
+        }
+
         RaycastHit2D h = Physics2D.Raycast(o, d, wallCheckDistance);
         // If there is no collision detected we just return
         if (h.collider == null)
