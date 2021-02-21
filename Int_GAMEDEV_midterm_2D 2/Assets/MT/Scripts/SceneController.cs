@@ -25,10 +25,20 @@ public class SceneController : MonoBehaviour
 
     public static void LoadScene(int sceneBuildIndex)
     {
+        if(instance == null)
+        {
+            Debug.LogError("Tried to load scene with index " + sceneBuildIndex + " but no SceneController was found in the current scene.");
+            return;
+        }
         instance.GoToScene(sceneBuildIndex);
     }
     public static void LoadScene(string sceneName)
     {
+        if (instance == null)
+        {
+            Debug.LogError("Tried to load scene " + sceneName + " but no SceneController was found in the current scene.");
+            return;
+        }
         instance.GoToScene(sceneName);
     }
 
