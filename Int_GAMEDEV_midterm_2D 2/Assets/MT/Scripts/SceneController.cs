@@ -57,9 +57,14 @@ public class SceneController : MonoBehaviour
         // Start loading the target scene
         AsyncOperation l = SceneManager.LoadSceneAsync(sceneBuildIndex);
         yield return new WaitForEndOfFrame();
+        Image fill = GameObject.Find("Fill") != null ? GameObject.Find("Fill").GetComponent<Image>() : null;
 
         // Wait for the scene load to be done
-        yield return new WaitUntil(() => l.isDone);
+        while (l.isDone == false)
+        {
+            fill.fillAmount= l.progress;
+            yield return new WaitForEndOfFrame();
+        }
 
         // Fade in
         animator.SetTrigger("In");
@@ -82,9 +87,14 @@ public class SceneController : MonoBehaviour
         // Start loading the target scene
         AsyncOperation l = SceneManager.LoadSceneAsync(sceneName);
         yield return new WaitForEndOfFrame();
+        Image fill = GameObject.Find("Fill") != null ? GameObject.Find("Fill").GetComponent<Image>() : null;
 
         // Wait for the scene load to be done
-        yield return new WaitUntil(() => l.isDone);
+        while (l.isDone == false)
+        {
+            fill.fillAmount = l.progress;
+            yield return new WaitForEndOfFrame();
+        }
 
         // Fade in
         animator.SetTrigger("In");
