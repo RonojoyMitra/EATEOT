@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// THIS IS JUST A TEST SCRIPT
+/// </summary>
 public class MainMenuController : MonoBehaviour
 {
     void Update()

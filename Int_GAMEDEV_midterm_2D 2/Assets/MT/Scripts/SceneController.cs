@@ -6,51 +6,76 @@ using UnityEngine.UI;
 
 public class SceneController : MonoBehaviour
 {
-    static SceneController instance;
+    static SceneController instance;    // Singleton instance
 
-    Animator animator;
-    Image blackout;
+    Animator animator;  // The animator which is used to control the transition effects
+    Image blackout;     // The blackout image used for fading
 
     [SerializeField]
+    [Tooltip("The index of the loading screen.")]
     int loadScreenIndex;
 
     void Awake()
     {
-        if (instance != null) Destroy(gameObject);
-        instance = this;
-        DontDestroyOnLoad(gameObject);
-        animator = GetComponent<Animator>();
-        blackout = GetComponentInChildren<Image>();
+        if (instance != null) Destroy(gameObject);  // If there is already a SceneController we destroy ourself
+        instance = this;    // Set the instance to this instance of SceneController
+        DontDestroyOnLoad(gameObject);  // Mark this object to not destroy on load
+        animator = GetComponent<Animator>();    // Get reference to the animator
+        blackout = GetComponentInChildren<Image>(); // Get reference to the blackout image
     }
 
+    /// <summary>
+    /// Asks the current SceneController instance to load a given scene.
+    /// </summary>
+    /// <param name="sceneBuildIndex">The build index of the scene to load.</param>
     public static void LoadScene(int sceneBuildIndex)
     {
-        if(instance == null)
+        // If there is not an instance of SceneController we throw an error.
+        if (instance == null)
         {
             Debug.LogError("Tried to load scene with index " + sceneBuildIndex + " but no SceneController was found in the current scene.");
             return;
         }
+        // Call the instance's GoToScene method
         instance.GoToScene(sceneBuildIndex);
     }
+    /// <summary>
+    /// Asks the current SceneController instance to load a given scene.
+    /// </summary>
+    /// <param name="sceneName">The name or path to the scene to load.</param>
     public static void LoadScene(string sceneName)
     {
+        // If there is not an instance of SceneController we throw an error.
         if (instance == null)
         {
             Debug.LogError("Tried to load scene " + sceneName + " but no SceneController was found in the current scene.");
             return;
         }
+        // Call the instance's GoToScene method
         instance.GoToScene(sceneName);
     }
 
+    /// <summary>
+    /// Starts the coroutine to load a scene.
+    /// </summary>
+    /// <param name="sceneBuildIndex">The build index of the scene to load.</param>
     void GoToScene(int sceneBuildIndex)
     {
         StartCoroutine(GoToSceneCoroutine(sceneBuildIndex));
     }
+    /// <summary>
+    /// Starts the coroutine to load a scene.
+    /// </summary>
+    /// <param name="sceneName">The name or path to the scene to load.</param>
     void GoToScene(string sceneName)
     {
         StartCoroutine(GoToSceneCoroutine(sceneName));
     }
 
+    /// <summary>
+    /// Loads a scene asynchronously and uses a loading scene to show the asynch progress.
+    /// </summary>
+    /// <param name="sceneBuildIndex">The build index of the scene to load.</param>
     IEnumerator GoToSceneCoroutine(int sceneBuildIndex)
     {
         yield return new WaitForEndOfFrame();   // WaitForEndOfFrame to allow the coroutine to breath
@@ -81,6 +106,10 @@ public class SceneController : MonoBehaviour
         yield return new WaitForEndOfFrame();
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).IsName("Transparent"));
     }
+    /// <summary>
+    /// Loads a scene asynchronously and uses a loading scene to show the asynch progress.
+    /// </summary>
+    /// <param name="sceneName">The name or path to the scene to load.</param>
     IEnumerator GoToSceneCoroutine(string sceneName)
     {
         yield return new WaitForEndOfFrame();   // WaitForEndOfFrame to allow the coroutine to breath
