@@ -54,6 +54,7 @@ public class PlayerController : MonoBehaviour
     Direction facing = Direction.RIGHT; // The direction the player is facing
     bool grabbing = false;  // Is the player grabbing
     bool grabFlag = false;  // Flag used to mark the player is trying to grab/release something
+    bool autograbFlag = false; // This is a flag used for autograbbing. It is only grabs and doesn't release
     [Header("Push and Pull")]
     [SerializeField]
     Transform grabbedBox;   // The box that is currently grabbed
@@ -64,6 +65,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     float extraGrabbingWallCheckOffset; // The extra offset used when holding a box
 
+    [Header("Auto Grab")]
+    [SerializeField]
+    float timeToAutograb;
+    float autograbTimer = 0f;
+
+    // These are the tags that when applied to an object allows the player to jump off of them
     string[] groundTags = { "Ground", "Box" }; 
 
     private void Start()
@@ -82,6 +89,8 @@ public class PlayerController : MonoBehaviour
             float gm = grabbing ? grabbingWalkSpeedMulti : 1f;
             transform.Translate(Vector3.right * maxWalkSpeed * walkCurve.Evaluate(Input.GetAxis("Horizontal")) * Time.deltaTime * gm);
         }
+
+        Autograb();
 
         // Makes sure the jump buffer timer is ticking
         if(jumpBuffer)
@@ -181,6 +190,10 @@ public class PlayerController : MonoBehaviour
                 TryRelease();   // Release if we are
             }
         }
+        if (autograbFlag && !grabbing)
+        {
+            TryGrab();
+        }
 
         // Box falls if not supported
         if (grabbing)
@@ -193,6 +206,27 @@ public class PlayerController : MonoBehaviour
             {
                 TryRelease();
             }
+        }
+    }
+
+    void Autograb()
+    {
+        // if the player is trying to move and there is a wall in the way
+        if( ( Input.GetAxis("Horizontal") > 0f && WallCheck(Direction.RIGHT) ) ||
+            ( Input.GetAxis("Horizontal") < 0f && WallCheck(Direction.LEFT) ) )
+        {
+            autograbTimer += Time.deltaTime;    // Keep track of how long they have been trying to walk
+        }
+        else
+        {
+            autograbTimer = 0f; // Otherwise reset the timer
+        }
+
+        // If the timer is up
+        if(autograbTimer >= timeToAutograb)
+        {
+            grabFlag = true;    // mark that we should try to grab at the next possible point
+            autograbTimer = 0f; // Reset the autograb timer
         }
     }
 
