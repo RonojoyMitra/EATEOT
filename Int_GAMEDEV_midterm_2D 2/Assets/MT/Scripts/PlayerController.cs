@@ -211,6 +211,9 @@ public class PlayerController : MonoBehaviour
 
     void Autograb()
     {
+        // Assume that if the time is negative we should not autograb
+        if (timeToAutograb < 0f) return;
+
         // if the player is trying to move and there is a wall in the way
         if( ( Input.GetAxis("Horizontal") > 0f && WallCheck(Direction.RIGHT) ) ||
             ( Input.GetAxis("Horizontal") < 0f && WallCheck(Direction.LEFT) ) )
