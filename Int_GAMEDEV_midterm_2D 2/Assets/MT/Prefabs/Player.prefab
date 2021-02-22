@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7707337706547910060}
   - component: {fileID: 7707337706547910057}
   - component: {fileID: 7707337706547910062}
+  - component: {fileID: 341509666}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -90,7 +91,6 @@ MonoBehaviour:
   leftGCOrigin: {x: -0.5, y: -0.576}
   rightGCOrigin: {x: 0.5, y: -0.576}
   gcDistance: 0.1
-  grabbedBox: {fileID: 0}
   wallCheckDistance: 0.05
   wallCheckOffset: 0.51
   extraGrabbingWallCheckOffset: 0.1
@@ -193,3 +193,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &341509666
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7707337706547910066}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0ebc12b36fad00846859c192479ac54a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

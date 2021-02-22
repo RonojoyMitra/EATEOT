@@ -87,12 +87,16 @@ public class PlayerController : MonoBehaviour
     float autograbTimer = 0f;
 
     // These are the tags that when applied to an object allows the player to jump off of them
-    string[] groundTags = { "Ground", "Box" }; 
+    string[] groundTags = { "Ground", "Box" };
+
+    // The animator for the player
+    Animator animator;
 
     private void Start()
     {
         instance = this;    // Set the singleton
         rb = GetComponent<Rigidbody2D>();   // Get reference to the rigidbody
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -103,6 +107,7 @@ public class PlayerController : MonoBehaviour
         UpdateJumpStatus();
         UpdateFacing();
         CheckGrabInput();
+        UpdateAnimationDirection();
     }
 
     void FixedUpdate()
@@ -500,6 +505,13 @@ public class PlayerController : MonoBehaviour
         {
             jumpStatus = JumpStatus.FALLING;
         }
+    }
+    #endregion
+
+    #region Animation
+    void UpdateAnimationDirection()
+    {
+        animator.SetInteger("Facing", facing == Direction.RIGHT ? 1 : -1);
     }
     #endregion
 
