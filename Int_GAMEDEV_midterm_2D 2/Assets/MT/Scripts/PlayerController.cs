@@ -262,11 +262,13 @@ public class PlayerController : MonoBehaviour
             if (grabbedBox.GetComponent<BoxController>().IsGrounded == false)
             {
                 TryRelease();
+                return;
             }
             // If the player's velocity and the box's vertical velocities are too different we release the box
             if (grabbedBox.GetComponent<Rigidbody2D>().velocity.y - rb.velocity.y > 0.1f || grabbedBox.GetComponent<Rigidbody2D>().velocity.y - rb.velocity.y < -0.1f)
             {
                 TryRelease();
+                return;
             }
         }
     }

@@ -12,7 +12,10 @@ public class CameraMovement : MonoBehaviour
     float maxDeltaX;
     [SerializeField]
     [Tooltip("The max distance allowed between the target and the camera is the Y direction.")]
-    float maxDeltaY;
+    float maxDeltaYPos;
+    [SerializeField]
+    [Tooltip("The max distance allowed between the target and the camera is the Y direction.")]
+    float maxDeltaYNeg;
     [SerializeField]
     [Range(0f, 1f)]
     [Tooltip("The time value used while lerping toward the target. A higher value will have the camera move toward the target faster.")]
@@ -26,10 +29,10 @@ public class CameraMovement : MonoBehaviour
             t.x = target.position.x - maxDeltaX;
         if (target.position.x < transform.position.x - maxDeltaX)
             t.x = target.position.x + maxDeltaX;
-        if (target.position.y > transform.position.y + maxDeltaY)
-            t.y = target.position.y - maxDeltaY;
-        if (target.position.y < transform.position.y - maxDeltaY)
-            t.y = target.position.y + maxDeltaY;
+        if (target.position.y > transform.position.y + maxDeltaYPos)
+            t.y = target.position.y - maxDeltaYPos;
+        if (target.position.y < transform.position.y - maxDeltaYNeg)
+            t.y = target.position.y + maxDeltaYNeg;
 
         transform.position = Vector3.Lerp(transform.position, t, lerpPercent);
     }
