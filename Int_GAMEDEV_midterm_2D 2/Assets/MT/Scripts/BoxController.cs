@@ -22,8 +22,10 @@ public class BoxController : MonoBehaviour
     [Tooltip("The distance used to check if the box is on the ground.")]
     float gcDistance;
 
+    Collider2D lPlatform, rPlatform;
+
     // These are the tags that when applied to an object mark the box as grounded
-    string[] groundTags = { "Ground", "Box" };
+    string[] groundTags = { "Ground", "Box", "Physics platform"};
 
     private void Start()
     {
@@ -33,6 +35,11 @@ public class BoxController : MonoBehaviour
     private void FixedUpdate()
     {
         grounded = GroundCheck();
+
+        /*if (lPlatform != null)
+            lPlatform.SendMessage("RegisterBox", gameObject);
+        if (rPlatform != null && lPlatform != rPlatform)
+            rPlatform.SendMessage("RegisterBox", gameObject);*/
     }
 
     #region Physics Checks
@@ -52,13 +59,29 @@ public class BoxController : MonoBehaviour
         RaycastHit2D r = Physics2D.Raycast(rb.position + rightGCOrigin, Vector2.down, gcDistance);
         if (l.collider != null)
         {
+            if (l.collider.CompareTag("Physics platform"))
+                lPlatform = l.collider;
+            else
+                lPlatform = null;
             if (GroundTagCheck(l.collider.tag))
                 return true;
         }
+        else
+        {
+            lPlatform = null;
+        }
         if (r.collider != null)
         {
+            if (r.collider.CompareTag("Physics platform"))
+                rPlatform = r.collider;
+            else
+                rPlatform = null;
             if (GroundTagCheck(r.collider.tag))
                 return true;
+        }
+        else
+        {
+            rPlatform = null;
         }
         return false;
     }
