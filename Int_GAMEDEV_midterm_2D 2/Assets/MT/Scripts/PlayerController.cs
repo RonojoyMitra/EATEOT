@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour
     float autograbTimer = 0f;
 
     // These are the tags that when applied to an object allows the player to jump off of them
-    string[] groundTags = { "Ground", "Box" };
+    string[] groundTags = { "Ground", "Box", "Physics platform" };
 
     // The animator for the player
     Animator animator;

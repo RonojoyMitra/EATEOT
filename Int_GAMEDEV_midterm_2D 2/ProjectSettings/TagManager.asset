@@ -8,6 +8,7 @@ TagManager:
   - bounce
   - Ground
   - Box
+  - Physics platform
   layers:
   - Default
   - TransparentFX

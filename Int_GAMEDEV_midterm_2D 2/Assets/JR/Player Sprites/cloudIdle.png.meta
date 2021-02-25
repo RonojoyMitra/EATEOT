@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: 0dbc7fdc997dd864dabbec72885e6297
+guid: 957ed9fee523342599d59ffb0080e13c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6218962007748728933
-    second: SpringPlatform_0
+      213: 7722836242599734012
+    second: cloudIdle_0
   - first:
-      213: -693533502222919931
-    second: SpringPlatform_1
+      213: -7403210721396046290
+    second: cloudIdle_1
   - first:
-      213: 8596434751697137649
-    second: SpringPlatform_2
+      213: -4713513157504676415
+    second: cloudIdle_2
+  - first:
+      213: -4572636784797420110
+    second: cloudIdle_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -50,12 +53,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 33
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -112,64 +115,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpringPlatform_0
+      name: cloudIdle_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1
+        y: 3
+        width: 47
+        height: 51
+      alignment: 9
+      pivot: {x: 0.69148934, y: 0.37254903}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b97ac70e00fc1b9a0800000000000000
-      internalID: -6218962007748728933
+      spriteID: cfa6ba235a60d2b60800000000000000
+      internalID: 7722836242599734012
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpringPlatform_1
+      name: cloudIdle_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 52
+        y: 3
+        width: 47
+        height: 53
+      alignment: 9
+      pivot: {x: 0.69148934, y: 0.3584906}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5079b2844f21066f0800000000000000
-      internalID: -693533502222919931
+      spriteID: e2643d1a213824990800000000000000
+      internalID: -7403210721396046290
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpringPlatform_2
+      name: cloudIdle_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 107
+        y: 3
+        width: 37
+        height: 43
+      alignment: 9
+      pivot: {x: 0.6351351, y: 0.44186047}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ff2bbd5cdbac4770800000000000000
-      internalID: 8596434751697137649
+      spriteID: 1cdcdcaa1cc369eb0800000000000000
+      internalID: -4713513157504676415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloudIdle_3
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 3
+        width: 43
+        height: 49
+      alignment: 9
+      pivot: {x: 0.68604654, y: 0.3877551}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b5f343321bba80c0800000000000000
+      internalID: -4572636784797420110
       vertices: []
       indices: 
       edges: []
