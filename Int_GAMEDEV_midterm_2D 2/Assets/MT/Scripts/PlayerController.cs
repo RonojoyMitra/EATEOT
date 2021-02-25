@@ -367,9 +367,49 @@ public class PlayerController : MonoBehaviour
 
         // If the raycast didn't hit anything we return false
         if (h.collider == null) return false;
+        // If the object we hit is a box we can push through it
+        if (grabbing && h.collider.CompareTag("Box"))
+        {
+            if (direction == Direction.RIGHT) return WallCheck(direction, o + new Vector2(grabbedBox.GetComponent<BoxCollider2D>().size.x, 0f));
+            if (direction == Direction.LEFT) return WallCheck(direction, o - new Vector2(grabbedBox.GetComponent<BoxCollider2D>().size.x, 0f));
+        }
         // If it did hit something we return true
         return true;
     }
+
+    bool WallCheck(Direction direction, Vector2 origin)
+    {
+        // The origin for the raycast
+        Vector2 o = origin;
+
+        // This is just the vector representation of direction
+        Vector2 d = direction == Direction.LEFT ? Vector2.left : Vector2.right;
+        // We do the raycast
+        RaycastHit2D h = Physics2D.Raycast(o, d, wallCheckDistance);
+
+        // Debugging
+        switch (debugMode)
+        {
+            case DebugMode.DRAW_RAYS:
+                Debug.DrawRay(o, d, wallCheckColor);
+                break;
+            case DebugMode.DRAW_RAYS_WITH_DISTANCE:
+                Debug.DrawRay(o, d * wallCheckDistance, wallCheckColor);
+                break;
+        }
+
+        // If the raycast didn't hit anything we return false
+        if (h.collider == null) return false;
+        // If the object we hit is a box we can push through it
+        if (grabbing && h.collider.CompareTag("Box"))
+        {
+            if (direction == Direction.RIGHT) return WallCheck(direction, o + new Vector2(grabbedBox.GetComponent<BoxCollider2D>().size.x, 0f));
+            if (direction == Direction.LEFT) return WallCheck(direction, o - new Vector2(grabbedBox.GetComponent<BoxCollider2D>().size.x, 0f));
+        }
+        // If it did hit something we return true
+        return true;
+    }
+
     #endregion
 
     #region Actions
