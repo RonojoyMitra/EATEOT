@@ -44,7 +44,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -58,7 +58,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 33
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -121,9 +121,9 @@ TextureImporter:
         x: 1
         y: 3
         width: 47
-        height: 54
+        height: 51
       alignment: 9
-      pivot: {x: 0.82532746, y: 0.32808307}
+      pivot: {x: 0.69148934, y: 0.37254903}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -139,12 +139,12 @@ TextureImporter:
       name: cloudIdle_1
       rect:
         serializedVersion: 2
-        x: 50
+        x: 52
         y: 3
-        width: 49
-        height: 54
+        width: 47
+        height: 53
       alignment: 9
-      pivot: {x: 0.82852995, y: 0.32364157}
+      pivot: {x: 0.69148934, y: 0.3584906}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,12 +160,12 @@ TextureImporter:
       name: cloudIdle_2
       rect:
         serializedVersion: 2
-        x: 100
+        x: 107
         y: 3
-        width: 46
-        height: 54
+        width: 37
+        height: 43
       alignment: 9
-      pivot: {x: 0.7952343, y: 0.32621205}
+      pivot: {x: 0.6351351, y: 0.44186047}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -181,12 +181,12 @@ TextureImporter:
       name: cloudIdle_3
       rect:
         serializedVersion: 2
-        x: 148
+        x: 152
         y: 3
-        width: 48
-        height: 54
+        width: 43
+        height: 49
       alignment: 9
-      pivot: {x: 0.82522744, y: 0.32462543}
+      pivot: {x: 0.68604654, y: 0.3877551}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

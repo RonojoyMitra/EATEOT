@@ -92,7 +92,7 @@ MonoBehaviour:
   rightGCOrigin: {x: 0.5, y: -0.576}
   gcDistance: 0.1
   wallCheckDistance: 0.05
-  wallCheckOffset: 0.51
+  wallCheckOffset: 0.45
   extraGrabbingWallCheckOffset: 0.1
   timeToAutograb: 0.5
 --- !u!212 &7707337706547910060
@@ -135,7 +135,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 8322534308881483960, guid: 04b26ae880d257645b4290479180b822, type: 3}
+  m_Sprite: {fileID: 7722836242599734012, guid: 957ed9fee523342599d59ffb0080e13c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -162,15 +162,15 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1.1515151}
+    pivot: {x: 0.69148934, y: 0.37254903}
+    oldSize: {x: 1.4242424, y: 1.5454545}
     newSize: {x: 0.4, y: 0.39}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.1515151}
+  m_Size: {x: 0.88, y: 1.1515151}
   m_EdgeRadius: 0
 --- !u!50 &7707337706547910062
 Rigidbody2D:
@@ -184,7 +184,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.5
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
