@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - Box
   - Physics platform
+  - Door
   layers:
   - Default
   - TransparentFX
