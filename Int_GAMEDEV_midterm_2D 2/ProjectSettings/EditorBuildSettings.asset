@@ -6,15 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/OG_Scenes/scn_start.unity
-    guid: 3bc95707b01a34bf4901c0d8f93cc185
+    path: Assets/MT/Scenes/MainMenuTest.unity
+    guid: 20d9cf738e1b85547859eb107e98955e
   - enabled: 1
-    path: Assets/OG_Scenes/scn_level1.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/MT/Scenes/BlackLoadingScreen.unity
+    guid: 505ed9e14c836d24d919e459663d03e4
   - enabled: 1
-    path: Assets/OG_Scenes/scn_level2.unity
-    guid: 12052bb36224749efa5306e6f53f9b1c
-  - enabled: 1
-    path: Assets/OG_Scenes/scn_end.unity
-    guid: 19f8d5c9c7ab643e9aae1e143c0c0318
+    path: Assets/MT/Scenes/PlayerControllerTestScene.unity
+    guid: 79d554c145380a34cb254d4ecd805c81
   m_configObjects: {}

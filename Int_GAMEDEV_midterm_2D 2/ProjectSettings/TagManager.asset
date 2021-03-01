@@ -8,6 +8,8 @@ TagManager:
   - bounce
   - Ground
   - Box
+  - Physics platform
+  - Door
   layers:
   - Default
   - TransparentFX

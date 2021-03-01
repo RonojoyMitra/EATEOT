@@ -49,7 +49,7 @@ MonoBehaviour:
   debugging: 0
   leftGCOrigin: {x: -0.88, y: -1.16}
   rightGCOrigin: {x: 0.88, y: -1.16}
-  gcDistance: 0.1
+  gcDistance: 0.2
 --- !u!212 &7516519437881667203
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -113,7 +113,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 3.5
+  m_Mass: 7
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 2
