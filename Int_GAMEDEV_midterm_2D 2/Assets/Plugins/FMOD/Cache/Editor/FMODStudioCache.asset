@@ -1,5 +1,23 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-210650102919726279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../../FMOD Studio/EATEOT/Build/Desktop/Master.bank
+  Name: Master
+  lastModified: 637501362416089580
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13,15 +31,15 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 2628897341314440108}
-  - {fileID: 1857427894353617533}
+  - {fileID: 8489845518168370664}
+  - {fileID: -210650102919726279}
   EditorEvents: []
   EditorParameters: []
   MasterBanks:
-  - {fileID: 1857427894353617533}
+  - {fileID: -210650102919726279}
   StringsBanks:
-  - {fileID: 2628897341314440108}
-  stringsBankWriteTime: 637501351631135696
+  - {fileID: 8489845518168370664}
+  stringsBankWriteTime: 637501362416149625
   cacheVersion: 5
 --- !u!114 &1857427894353617533
 MonoBehaviour:
@@ -56,6 +74,26 @@ MonoBehaviour:
   Path: ../../FMOD Studio/EATEOTSounds/Build/Desktop/Master.strings.bank
   Name: Master.strings
   lastModified: 637501351631135696
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 700
+  Exists: 1
+--- !u!114 &8489845518168370664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: ../../FMOD Studio/EATEOT/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  lastModified: 637501362416149625
   LoadResult: 0
   FileSizes:
   - Name: Desktop

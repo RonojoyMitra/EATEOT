@@ -186,8 +186,8 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../../FMOD Studio/EATEOTSounds/EATEOTSounds.fspro
-  sourceBankPath: ..\..\FMOD Studio\EATEOTSounds\Build
+  sourceProjectPath: ../../FMOD Studio/EATEOT/EATEOT.fspro
+  sourceBankPath: ..\..\FMOD Studio\EATEOT\Build
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   BankLoadType: 0
