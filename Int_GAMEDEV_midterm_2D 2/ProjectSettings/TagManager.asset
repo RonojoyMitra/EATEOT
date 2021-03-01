@@ -10,6 +10,7 @@ TagManager:
   - Box
   - Physics platform
   - Door
+  - VanishingBlock
   layers:
   - Default
   - TransparentFX

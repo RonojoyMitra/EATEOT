@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour
     float autograbTimer = 0f;
 
     // These are the tags that when applied to an object allows the player to jump off of them
-    string[] groundTags = { "Ground", "Box", "Physics platform" };
+    string[] groundTags = { "Ground", "Box", "Physics platform", "VanishingBlock" };
 
     // The animator for the player
     Animator animator;
@@ -305,12 +305,30 @@ public class PlayerController : MonoBehaviour
         if (l.collider != null)
         {
             if (GroundTagCheck(l.collider.tag))
+            {
+                if(l.collider.CompareTag("VanishingBlock"))
+                {
+                    l.collider.GetComponent<VanishingBlock>().Vanish();
+                }
+                if (r.collider != null)
+                    if (r.collider.CompareTag("VanishingBlock"))
+                        r.collider.GetComponent<VanishingBlock>().Vanish();
                 return true;
+            }
         }
         if (r.collider != null)
         {
             if (GroundTagCheck(r.collider.tag))
+            {
+                if (r.collider.CompareTag("VanishingBlock"))
+                {
+                    r.collider.GetComponent<VanishingBlock>().Vanish();
+                }
+                if (l.collider != null)
+                    if (l.collider.CompareTag("VanishingBlock"))
+                        l.collider.GetComponent<VanishingBlock>().Vanish();
                 return true;
+            }
         }
         // If neither raycast finds a valid ground collider we return false.
         return false;
