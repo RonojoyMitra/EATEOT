@@ -11,6 +11,7 @@ TagManager:
   - Physics platform
   - Door
   - VanishingBlock
+  - Spring
   layers:
   - Default
   - TransparentFX

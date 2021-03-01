@@ -86,6 +86,10 @@ public class PlayerController : MonoBehaviour
     float timeToAutograb;
     float autograbTimer = 0f;
 
+    [Header("Spring")]
+    [SerializeField]
+    float springForce;
+
     // These are the tags that when applied to an object allows the player to jump off of them
     string[] groundTags = { "Ground", "Box", "Physics platform", "VanishingBlock" };
 
@@ -116,6 +120,11 @@ public class PlayerController : MonoBehaviour
         JumpPhysics();
         Grab();
         CheckBoxFalling();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Spring")) Spring();
     }
 
     #region Player Inputs
@@ -385,6 +394,8 @@ public class PlayerController : MonoBehaviour
 
         // If the raycast didn't hit anything we return false
         if (h.collider == null) return false;
+
+        if (h.collider.isTrigger == true) return false;
         // If the object we hit is a box we can push through it
         if (grabbing && h.collider.CompareTag("Box"))
         {
@@ -418,6 +429,7 @@ public class PlayerController : MonoBehaviour
 
         // If the raycast didn't hit anything we return false
         if (h.collider == null) return false;
+        if (h.collider.isTrigger == true) return false;
         // If the object we hit is a box we can push through it
         if (grabbing && h.collider.CompareTag("Box"))
         {
@@ -431,6 +443,13 @@ public class PlayerController : MonoBehaviour
     #endregion
 
     #region Actions
+    void Spring()
+    {
+        rb.angularVelocity = 0f;
+        rb.velocity = Vector2.zero;
+        rb.AddForce(Vector2.up * springForce, ForceMode2D.Impulse);
+    }
+
     /// <summary>
     /// This method controls the logic of all grab actions. 
     /// This includes both normal player input grabs as well as other grabs like autograbs.
