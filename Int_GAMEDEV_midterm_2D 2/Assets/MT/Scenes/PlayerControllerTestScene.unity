@@ -3378,7 +3378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11834adb14cd95e408b9b48300ee56f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 5
+  distance: 7.5
 --- !u!4 &1210997808
 Transform:
   m_ObjectHideFlags: 0
@@ -4770,7 +4770,7 @@ MonoBehaviour:
   maxDeltaX: 2
   maxDeltaYPos: 3
   maxDeltaYNeg: 2
-  lerpPercent: 0.125
+  lerpPercent: 0.025
 --- !u!1001 &235534908221065367
 PrefabInstance:
   m_ObjectHideFlags: 0
