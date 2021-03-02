@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Mushroom
   - bounce
+  - Ground
+  - Box
+  - Physics platform
+  - Door
+  - VanishingBlock
+  - Spring
   layers:
   - Default
   - TransparentFX
