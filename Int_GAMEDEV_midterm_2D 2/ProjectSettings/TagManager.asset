@@ -9,6 +9,9 @@ TagManager:
   - Ground
   - Box
   - Physics platform
+  - Door
+  - VanishingBlock
+  - Spring
   layers:
   - Default
   - TransparentFX

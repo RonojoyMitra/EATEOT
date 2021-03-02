@@ -21,10 +21,20 @@ public class CameraMovement : MonoBehaviour
     [Tooltip("The time value used while lerping toward the target. A higher value will have the camera move toward the target faster.")]
     float lerpPercent;
 
+    Transform currentAnchor = null;
+
     // This is called in LateUpdate to avoid any jittering from the camera's movement happening at an arbitrary time relative to other objects' movement
     void LateUpdate()
     {
+        Transform mem = target;
+
+        if(currentAnchor != null)
+        {
+            target = currentAnchor;
+        }
+
         Vector3 t = transform.position;
+
         if (target.position.x > transform.position.x + maxDeltaX)
             t.x = target.position.x - maxDeltaX;
         if (target.position.x < transform.position.x - maxDeltaX)
@@ -35,5 +45,12 @@ public class CameraMovement : MonoBehaviour
             t.y = target.position.y + maxDeltaYNeg;
 
         transform.position = Vector3.Lerp(transform.position, t, lerpPercent);
+        target = mem;
+        currentAnchor = null;
+    }
+
+    public void Anchor(Transform anchor)
+    {
+        currentAnchor = anchor;
     }
 }

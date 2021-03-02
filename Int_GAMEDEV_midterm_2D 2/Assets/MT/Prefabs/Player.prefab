@@ -95,6 +95,7 @@ MonoBehaviour:
   wallCheckOffset: 0.45
   extraGrabbingWallCheckOffset: 0.1
   timeToAutograb: 0.5
+  springForce: 20
 --- !u!212 &7707337706547910060
 SpriteRenderer:
   m_ObjectHideFlags: 0

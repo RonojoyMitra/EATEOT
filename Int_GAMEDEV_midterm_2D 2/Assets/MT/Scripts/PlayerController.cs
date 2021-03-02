@@ -86,8 +86,12 @@ public class PlayerController : MonoBehaviour
     float timeToAutograb;
     float autograbTimer = 0f;
 
+    [Header("Spring")]
+    [SerializeField]
+    float springForce;
+
     // These are the tags that when applied to an object allows the player to jump off of them
-    string[] groundTags = { "Ground", "Box", "Physics platform" };
+    string[] groundTags = { "Ground", "Box", "Physics platform", "VanishingBlock" };
 
     // The animator for the player
     Animator animator;
@@ -116,6 +120,11 @@ public class PlayerController : MonoBehaviour
         JumpPhysics();
         Grab();
         CheckBoxFalling();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Spring")) Spring();
     }
 
     #region Player Inputs
@@ -305,12 +314,30 @@ public class PlayerController : MonoBehaviour
         if (l.collider != null)
         {
             if (GroundTagCheck(l.collider.tag))
+            {
+                if(l.collider.CompareTag("VanishingBlock"))
+                {
+                    l.collider.GetComponent<VanishingBlock>().Vanish();
+                }
+                if (r.collider != null)
+                    if (r.collider.CompareTag("VanishingBlock"))
+                        r.collider.GetComponent<VanishingBlock>().Vanish();
                 return true;
+            }
         }
         if (r.collider != null)
         {
             if (GroundTagCheck(r.collider.tag))
+            {
+                if (r.collider.CompareTag("VanishingBlock"))
+                {
+                    r.collider.GetComponent<VanishingBlock>().Vanish();
+                }
+                if (l.collider != null)
+                    if (l.collider.CompareTag("VanishingBlock"))
+                        l.collider.GetComponent<VanishingBlock>().Vanish();
                 return true;
+            }
         }
         // If neither raycast finds a valid ground collider we return false.
         return false;
@@ -367,12 +394,62 @@ public class PlayerController : MonoBehaviour
 
         // If the raycast didn't hit anything we return false
         if (h.collider == null) return false;
+
+        if (h.collider.isTrigger == true) return false;
+        // If the object we hit is a box we can push through it
+        if (grabbing && h.collider.CompareTag("Box"))
+        {
+            if (direction == Direction.RIGHT) return WallCheck(direction, o + new Vector2(grabbedBox.GetComponent<BoxCollider2D>().size.x, 0f));
+            if (direction == Direction.LEFT) return WallCheck(direction, o - new Vector2(grabbedBox.GetComponent<BoxCollider2D>().size.x, 0f));
+        }
         // If it did hit something we return true
         return true;
     }
+
+    bool WallCheck(Direction direction, Vector2 origin)
+    {
+        // The origin for the raycast
+        Vector2 o = origin;
+
+        // This is just the vector representation of direction
+        Vector2 d = direction == Direction.LEFT ? Vector2.left : Vector2.right;
+        // We do the raycast
+        RaycastHit2D h = Physics2D.Raycast(o, d, wallCheckDistance);
+
+        // Debugging
+        switch (debugMode)
+        {
+            case DebugMode.DRAW_RAYS:
+                Debug.DrawRay(o, d, wallCheckColor);
+                break;
+            case DebugMode.DRAW_RAYS_WITH_DISTANCE:
+                Debug.DrawRay(o, d * wallCheckDistance, wallCheckColor);
+                break;
+        }
+
+        // If the raycast didn't hit anything we return false
+        if (h.collider == null) return false;
+        if (h.collider.isTrigger == true) return false;
+        // If the object we hit is a box we can push through it
+        if (grabbing && h.collider.CompareTag("Box"))
+        {
+            if (direction == Direction.RIGHT) return WallCheck(direction, o + new Vector2(grabbedBox.GetComponent<BoxCollider2D>().size.x, 0f));
+            if (direction == Direction.LEFT) return WallCheck(direction, o - new Vector2(grabbedBox.GetComponent<BoxCollider2D>().size.x, 0f));
+        }
+        // If it did hit something we return true
+        return true;
+    }
+
     #endregion
 
     #region Actions
+    void Spring()
+    {
+        rb.angularVelocity = 0f;
+        rb.velocity = Vector2.zero;
+        rb.AddForce(Vector2.up * springForce, ForceMode2D.Impulse);
+    }
+
     /// <summary>
     /// This method controls the logic of all grab actions. 
     /// This includes both normal player input grabs as well as other grabs like autograbs.
