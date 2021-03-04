@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class CameraAnchor : MonoBehaviour
 {
-    [SerializeField]
-    public float distance = 10f;
-
-    void Update()
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if(Vector3.Distance(PlayerController.instance.transform.position, transform.position) < distance)
+        if(collision.CompareTag("Player"))
         {
+            Debug.Log("WHAT");
             Camera.main.GetComponent<CameraMovement>().Anchor(transform);
         }
     }

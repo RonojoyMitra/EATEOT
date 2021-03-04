@@ -23,6 +23,8 @@ public class CameraMovement : MonoBehaviour
 
     Transform currentAnchor = null;
 
+    float anchorTimer = 0f;
+
     // This is called in LateUpdate to avoid any jittering from the camera's movement happening at an arbitrary time relative to other objects' movement
     void LateUpdate()
     {
@@ -46,11 +48,17 @@ public class CameraMovement : MonoBehaviour
 
         transform.position = Vector3.Lerp(transform.position, t, lerpPercent);
         target = mem;
-        currentAnchor = null;
+
+        anchorTimer += Time.deltaTime;
+        if(anchorTimer > 0.25f)
+        {
+            currentAnchor = null;
+        }
     }
 
     public void Anchor(Transform anchor)
     {
         currentAnchor = anchor;
+        anchorTimer = 0f;
     }
 }
