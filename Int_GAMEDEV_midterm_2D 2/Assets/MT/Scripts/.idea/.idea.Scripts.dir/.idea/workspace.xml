@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a63ec73e-b3e9-434b-b557-24986f0253ed" name="Default Changelist" comment="" />
+    <list default="true" id="1894935a-c783-4222-a360-e8f9ceb34391" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/AudioManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../TR/AudioManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/AudioManager.cs" />
+        <option value="$PROJECT_DIR$/../../TR/AudioManager.cs" />
+        <option value="$PROJECT_DIR$/PlayerController.cs" />
       </list>
     </option>
   </component>
-  <component name="ProjectId" id="1p8J46fRw29jlKiIMjXxe98HXW5" />
+  <component name="ProjectId" id="1pIoWEdO6WodxfWliaj3iOILgLg" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -42,12 +44,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a63ec73e-b3e9-434b-b557-24986f0253ed" name="Default Changelist" comment="" />
-      <created>1614558593749</created>
+      <changelist id="1894935a-c783-4222-a360-e8f9ceb34391" name="Default Changelist" comment="" />
+      <created>1614880015760</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1614558593749</updated>
-      <workItem from="1614558606556" duration="1275000" />
+      <updated>1614880015760</updated>
+      <workItem from="1614880017526" duration="2947000" />
     </task>
     <servers />
   </component>
