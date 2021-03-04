@@ -15,8 +15,10 @@ public class PressurePlate : MonoBehaviour
     {
         if(lastFrame != active)
         {
-            if (active) Activate();
-            else Deactivate();
+            if (active)
+                this.Activate();
+            else
+                this.Deactivate();
             lastFrame = active;
         }
     }

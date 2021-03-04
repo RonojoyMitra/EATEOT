@@ -8,7 +8,6 @@ public class CameraAnchor : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            Debug.Log("WHAT");
             Camera.main.GetComponent<CameraMovement>().Anchor(transform);
         }
     }
