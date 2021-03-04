@@ -23,7 +23,7 @@ public class BoxController : MonoBehaviour
     float gcDistance;
 
     // These are the tags that when applied to an object mark the box as grounded
-    string[] groundTags = { "Ground", "Box", "Physics platform"};
+    string[] groundTags = { "Ground", "Box", "Physics platform", "VanishingBlock"};
 
     private void Start()
     {
