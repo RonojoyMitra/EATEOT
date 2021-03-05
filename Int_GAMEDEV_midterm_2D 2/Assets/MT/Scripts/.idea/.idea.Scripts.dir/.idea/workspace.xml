@@ -12,6 +12,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WeirdnessReader.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../TR/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -52,6 +53,7 @@
       <updated>1614880015760</updated>
       <workItem from="1614880017526" duration="2947000" />
       <workItem from="1614913715821" duration="1260000" />
+      <workItem from="1614968099932" duration="1747000" />
     </task>
     <servers />
   </component>

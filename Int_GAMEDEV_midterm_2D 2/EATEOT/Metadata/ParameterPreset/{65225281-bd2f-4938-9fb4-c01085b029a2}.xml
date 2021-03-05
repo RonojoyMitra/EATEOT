@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{65225281-bd2f-4938-9fb4-c01085b029a2}">
+		<property name="name">
+			<value>Green Weirdness</value>
+		</property>
+		<relationship name="folder">
+			<destination>{27dbb745-cd35-4193-afa3-460e7fd4633a}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{c88f0bd0-58a4-405f-9484-a44ffa8bd97a}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{c88f0bd0-58a4-405f-9484-a44ffa8bd97a}">
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

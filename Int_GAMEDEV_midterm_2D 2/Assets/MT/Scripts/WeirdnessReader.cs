@@ -39,15 +39,15 @@ public class WeirdnessReader : MonoBehaviour
 
     float GetRed()
     {
-        return GetColor().r;
+        return (Mathf.Round(GetColor().r * 10f) / 10f);
     }
     float GetGreen()
     {
-        return GetColor().g;
+        return (Mathf.Round(GetColor().g * 10f) / 10f);
     }
     float GetBlue()
     {
-        return GetColor().b;
+        return (Mathf.Round(GetColor().b * 10f) / 10f);
     }
 
     Color GetColor()
