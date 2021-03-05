@@ -32,6 +32,9 @@ public class WeirdnessReader : MonoBehaviour
         r = Red;
         g = Green;
         b = Blue;
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Red Weirdness", r);
+		FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Green Weirdness", g);
+		FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Blue Weirdness", b);
     }
 
     float GetRed()
