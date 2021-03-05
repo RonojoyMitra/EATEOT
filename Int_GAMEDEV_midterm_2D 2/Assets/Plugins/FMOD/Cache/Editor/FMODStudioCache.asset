@@ -98,11 +98,11 @@ MonoBehaviour:
   - {fileID: -210650102919726279}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 257000
+  Length: 210504
 --- !u!114 &-3380362952953549054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../../FMOD Studio/EATEOT/Build/Desktop/Master.bank
   Name: Master
-  lastModified: 637504928033532392
+  lastModified: 637505420904036359
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -206,7 +206,7 @@ MonoBehaviour:
   - {fileID: -210650102919726279}
   StringsBanks:
   - {fileID: 8489845518168370664}
-  stringsBankWriteTime: 637504928033572424
+  stringsBankWriteTime: 637505420904096410
   cacheVersion: 5
 --- !u!114 &1857427894353617533
 MonoBehaviour:
@@ -300,7 +300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../../FMOD Studio/EATEOT/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 637504928033572424
+  lastModified: 637505420904096410
   LoadResult: 0
   FileSizes:
   - Name: Desktop
