@@ -133,6 +133,29 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void Walk()
     {
+        // if the player is moving right, there is a wall on their right, and they are either jumping or falling
+        if(Input.GetAxis("Horizontal") > 0f && WallCheck(Direction.RIGHT) && (jumpStatus == JumpStatus.HOLDING || jumpStatus == JumpStatus.FALLING))
+        {
+            // Save the object that is to the right of the player
+            GameObject gm = GetWallCheckObject(Direction.RIGHT);
+            // If it is a box
+            if(gm != null && gm.CompareTag("Box"))
+            {
+                // move it
+                gm.transform.Translate(Vector3.right * maxWalkSpeed * walkCurve.Evaluate(Input.GetAxis("Horizontal")) * Time.deltaTime);
+            }
+        }
+        // same but for the left
+        else if(Input.GetAxis("Horizontal") < 0f && WallCheck(Direction.LEFT) && (jumpStatus == JumpStatus.HOLDING || jumpStatus == JumpStatus.FALLING))
+        {
+            GameObject gm = GetWallCheckObject(Direction.LEFT);
+            if(gm != null && gm.CompareTag("Box"))
+            {
+                // Still translated right because the walkcurve will evaluate as negative
+                gm.transform.Translate(Vector3.right * maxWalkSpeed * walkCurve.Evaluate(Input.GetAxis("Horizontal")) * Time.deltaTime);
+            }
+        }
+
         // If the player is inputing a horizontal direction and there is not a wall in that direction
         if ((Input.GetAxis("Horizontal") > 0f && !WallCheck(Direction.RIGHT)) || (Input.GetAxis("Horizontal") < 0f && !WallCheck(Direction.LEFT)))
         {
@@ -438,6 +461,56 @@ public class PlayerController : MonoBehaviour
         }
         // If it did hit something we return true
         return true;
+    }
+
+    GameObject GetWallCheckObject(Direction direction)
+    {
+        // The origin for the raycast
+        Vector2 o = transform.position;
+
+        // The origin is adjusted based on the width of the player and the width of the box if the player is holding one
+        if (!grabbing)
+        {
+            // If the player is not grabbing we just add a vector equal to the wallCheckOffset in the direction we are checking
+            o += direction == Direction.LEFT ? Vector2.left * wallCheckOffset : Vector2.right * wallCheckOffset;
+        }
+        else
+        {
+            /* If the player is grabbing we have to check if we are grabbing in the direction of the box.
+             * If the direction we are checking matches the direction we are facing then we know we are checking in the direction of the box.
+             * If we are checking in the direction of the box we add a distance equal to
+             * the base wallCheckOffset + the width of the box (after accounting for the scale of the box) + the extraGrabbgingWallCheckOffset.
+             * Otherwise we just add a distance equal to the normal wallCheckOffset.
+             */
+            if (direction == Direction.LEFT && facing == Direction.LEFT)
+                o += Vector2.left * (wallCheckOffset + grabbedBox.GetComponent<BoxCollider2D>().size.x * grabbedBox.lossyScale.x + extraGrabbingWallCheckOffset);
+            else if (direction == Direction.LEFT && facing == Direction.RIGHT)
+                o += Vector2.left * wallCheckOffset;
+            else if (direction == Direction.RIGHT && facing == Direction.RIGHT)
+                o += Vector2.right * (wallCheckOffset + grabbedBox.GetComponent<BoxCollider2D>().size.x * grabbedBox.lossyScale.x + extraGrabbingWallCheckOffset);
+            else if (direction == Direction.RIGHT && facing == Direction.LEFT)
+                o += Vector2.right * wallCheckOffset;
+        }
+        // This is just the vector representation of direction
+        Vector2 d = direction == Direction.LEFT ? Vector2.left : Vector2.right;
+        // We do the raycast
+        RaycastHit2D h = Physics2D.Raycast(o, d, wallCheckDistance);
+
+        // Debugging
+        switch (debugMode)
+        {
+            case DebugMode.DRAW_RAYS:
+                Debug.DrawRay(o, d, wallCheckColor);
+                break;
+            case DebugMode.DRAW_RAYS_WITH_DISTANCE:
+                Debug.DrawRay(o, d * wallCheckDistance, wallCheckColor);
+                break;
+        }
+
+        // If the raycast didn't hit anything we return false
+        if (h.collider == null) return null;
+
+        return h.collider.gameObject;
     }
 
     #endregion
