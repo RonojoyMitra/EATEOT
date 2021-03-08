@@ -219,6 +219,7 @@ MonoBehaviour:
   extraGrabbingWallCheckOffset: 0.1
   timeToAutograb: 0.5
   springForce: 20
+  percentageMaxWalkSpeedToWalkAnimation: 0.15
 --- !u!212 &7707337706547910060
 SpriteRenderer:
   m_ObjectHideFlags: 0

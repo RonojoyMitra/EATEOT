@@ -90,6 +90,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     float springForce;
 
+    [Header("Animation")]
+    [SerializeField]
+    [Range(0f, 1f)]
+    float percentageMaxWalkSpeedToWalkAnimation;
+
     // These are the tags that when applied to an object allows the player to jump off of them
     string[] groundTags = { "Ground", "Box", "Physics platform", "VanishingBlock" };
 
@@ -112,6 +117,8 @@ public class PlayerController : MonoBehaviour
         UpdateFacing();
         CheckGrabInput();
         UpdateAnimationDirection();
+
+        UpdateAnimationPushing();
     }
 
     void FixedUpdate()
@@ -166,6 +173,14 @@ public class PlayerController : MonoBehaviour
              */
             float gm = grabbing ? grabbingWalkSpeedMulti : 1f;
             transform.Translate(Vector3.right * maxWalkSpeed * walkCurve.Evaluate(Input.GetAxis("Horizontal")) * Time.deltaTime * gm);
+            if (Mathf.Abs(walkCurve.Evaluate(Input.GetAxis("Horizontal"))) > percentageMaxWalkSpeedToWalkAnimation * maxWalkSpeed)
+                animator.SetBool("Walking", true);
+            else
+                animator.SetBool("Walking", false);
+        }
+        else
+        {
+            animator.SetBool("Walking", false);
         }
     }
 
@@ -664,6 +679,31 @@ public class PlayerController : MonoBehaviour
     void UpdateAnimationDirection()
     {
         animator.SetInteger("Facing", facing == Direction.RIGHT ? 1 : -1);
+    }
+
+    void UpdateAnimationPushing()
+    {
+        if(!grabbing)
+        {
+            animator.SetInteger("Pushing", 0);
+            return;
+        }
+
+        // If the box is to the right and you are pushing
+        if(Input.GetAxis("Horizontal") > 0f)
+        {
+            if (grabbedBox.position.x > transform.position.x)
+                animator.SetInteger("Pushing", 1);
+            else
+                animator.SetInteger("Pushing", -2);
+        }
+        else if(Input.GetAxis("Horizontal") < 0f)
+        {
+            if (grabbedBox.position.x < transform.position.x)
+                animator.SetInteger("Pushing", -1);
+            else
+                animator.SetInteger("Pushing", 2);
+        }
     }
     #endregion
 
