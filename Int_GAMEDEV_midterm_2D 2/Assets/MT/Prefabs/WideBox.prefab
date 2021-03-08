@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4281448739944001214}
   - component: {fileID: 4281448739944001209}
   m_Layer: 0
-  m_Name: Box (2)
+  m_Name: WideBox
   m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,9 +46,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081486cb16075b247be366739e3a071e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugging: 1
-  leftGCOrigin: {x: -1.99, y: -1.01}
-  rightGCOrigin: {x: 1.99, y: -1.01}
+  debugging: 0
+  leftGCOrigin: {x: -1.59, y: -0.81}
+  rightGCOrigin: {x: 1.59, y: -0.81}
   gcDistance: 0.2
 --- !u!212 &4281448739944001215
 SpriteRenderer:
@@ -137,14 +137,14 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.18867925, y: 0, z: 0, w: 0}
+    border: {x: 0.15151516, y: 0, z: 0, w: 0}
     pivot: {x: 0.5225225, y: 0.5}
-    oldSize: {x: 4.188679, y: 2}
+    oldSize: {x: 3.3636363, y: 1.6060606}
     newSize: {x: 1.28, y: 1.28}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4, y: 2}
+  m_Size: {x: 3.212122, y: 1.606061}
   m_EdgeRadius: 0
