@@ -22,11 +22,11 @@ public class BoxController : MonoBehaviour
     [Tooltip("The distance used to check if the box is on the ground.")]
     float gcDistance;
 
-    // These are the tags that when applied to an object mark the box as grounded
-    string[] groundTags = { "Ground", "Box", "Physics platform", "VanishingBlock"};
+    string[] groundTags;
 
     private void Start()
     {
+        groundTags = PlayerController.groundTags;
         rb = GetComponent<Rigidbody2D>();
     }
 
