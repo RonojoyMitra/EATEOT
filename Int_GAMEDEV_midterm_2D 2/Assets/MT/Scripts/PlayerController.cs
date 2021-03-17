@@ -96,7 +96,7 @@ public class PlayerController : MonoBehaviour
     float percentageMaxWalkSpeedToWalkAnimation;
 
     // These are the tags that when applied to an object allows the player to jump off of them
-    string[] groundTags = { "Ground", "Box", "Physics platform", "VanishingBlock" };
+    public static string[] groundTags = { "Ground", "Box", "Physics platform", "VanishingBlock", "MovingPlatform" };
 
     // The animator for the player
     Animator animator;

@@ -77,13 +77,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movements:
   - position: {x: 7, y: -2.5}
-    duration: 3
+    speed: 2
+    postMoveWaitTime: 1
   - position: {x: 12, y: -2.5}
-    duration: 1.5
-  - position: {x: 12, y: -2.5}
-    duration: 3
+    speed: 2
+    postMoveWaitTime: 1
+  differentWhenStoodOn: 1
+  stoodOnMovements:
   - position: {x: 7, y: -2.5}
-    duration: 1.5
+    speed: 2
+    postMoveWaitTime: 1
+  - position: {x: 7, y: 5}
+    speed: 2
+    postMoveWaitTime: 1
 --- !u!50 &2838130712746715055
 Rigidbody2D:
   serializedVersion: 4
