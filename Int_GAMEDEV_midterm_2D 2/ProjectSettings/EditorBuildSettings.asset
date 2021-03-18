@@ -8,10 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/MT/Scenes/MainMenuTest.unity
     guid: 20d9cf738e1b85547859eb107e98955e
-  - enabled: 0
+  - enabled: 1
     path: Assets/_MAIN/MainMenuTest 1.unity
     guid: 19414786b6b1abc4bb315e2e2de8bb83
-  - enabled: 0
+  - enabled: 1
     path: Assets/MT/Scenes/BlackLoadingScreen.unity
     guid: 505ed9e14c836d24d919e459663d03e4
   - enabled: 0
@@ -21,15 +21,12 @@ EditorBuildSettings:
     path: Assets/OG_Scenes/scn_start.unity
     guid: 3bc95707b01a34bf4901c0d8f93cc185
   - enabled: 0
-    path: Assets/RM/Scenes/Experimental Stage1 Level-1.unity
+    path: Assets/RM/Scenes/Experimental Stage1 Level-2.unity
     guid: cd97b1a0ceafc9048aa79d1e62c4fac3
-  - enabled: 0
-    path: Assets/_MAIN/Section1.unity
-    guid: ffd107e1443776b43946a49bc098cd4a
   - enabled: 1
-    path: Assets/MT/Scenes/CopyOfRonLevel1.unity
-    guid: a2bfc4aabfdfb8142b2688519bb159fa
-  - enabled: 0
-    path: Assets/TR/TRSection.unity
-    guid: 183698c417ce10640bd80cc0cbd44128
+    path: Assets/RM/Scenes/Experimental Stage1 Level-1 1.unity
+    guid: ac91fcd2e8eced647a1bb4a074d6dbb6
+  - enabled: 1
+    path: Assets/RM/Scenes/Section1.unity
+    guid: ffd107e1443776b43946a49bc098cd4a
   m_configObjects: {}
