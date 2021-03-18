@@ -19,10 +19,10 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/MT/Scripts/CameraMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/TR/CameraShifter.cs" />
-        <option value="$PROJECT_DIR$/Assets/MT/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/TR/TempQuit.cs" />
         <option value="$PROJECT_DIR$/Assets/TR/AudioManager.cs" />
         <option value="$PROJECT_DIR$/Assets/TR/PhysicsSoundShifter.cs" />
+        <option value="$PROJECT_DIR$/Assets/MT/Scripts/PlayerController.cs" />
       </list>
     </option>
   </component>
@@ -85,7 +85,7 @@
       <updated>1615835802121</updated>
       <workItem from="1615835810193" duration="4747000" />
       <workItem from="1616044566455" duration="5479000" />
-      <workItem from="1616062111661" duration="728000" />
+      <workItem from="1616062111661" duration="2659000" />
     </task>
     <servers />
   </component>
@@ -102,5 +102,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1615835876719" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1616064462836">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1616064462836" />
   </component>
 </project>
