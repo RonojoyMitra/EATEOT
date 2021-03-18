@@ -180,7 +180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: EATEOT/Build/Desktop/Master.bank
   Name: Master
-  lastModified: 637516316473144354
+  lastModified: 637516454404802322
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -356,7 +356,7 @@ MonoBehaviour:
   - {fileID: -4013136208908542711}
   StringsBanks:
   - {fileID: 732462167106406658}
-  stringsBankWriteTime: 637516316473194402
+  stringsBankWriteTime: 637516454404852380
   cacheVersion: 5
 --- !u!114 &732462167106406658
 MonoBehaviour:
@@ -372,7 +372,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: EATEOT/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 637516316473194402
+  lastModified: 637516454404852380
   LoadResult: 0
   FileSizes:
   - Name: Desktop
