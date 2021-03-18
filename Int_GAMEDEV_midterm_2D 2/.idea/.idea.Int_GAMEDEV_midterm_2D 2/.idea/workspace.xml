@@ -21,8 +21,8 @@
         <option value="$PROJECT_DIR$/Assets/TR/CameraShifter.cs" />
         <option value="$PROJECT_DIR$/Assets/TR/TempQuit.cs" />
         <option value="$PROJECT_DIR$/Assets/TR/AudioManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/TR/PhysicsSoundShifter.cs" />
         <option value="$PROJECT_DIR$/Assets/MT/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/TR/PhysicsSoundShifter.cs" />
       </list>
     </option>
   </component>
@@ -85,7 +85,7 @@
       <updated>1615835802121</updated>
       <workItem from="1615835810193" duration="4747000" />
       <workItem from="1616044566455" duration="5479000" />
-      <workItem from="1616062111661" duration="2659000" />
+      <workItem from="1616062111661" duration="5498000" />
     </task>
     <servers />
   </component>

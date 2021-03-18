@@ -179,18 +179,18 @@ public class PlayerController : MonoBehaviour
             if (Mathf.Abs(walkCurve.Evaluate(Input.GetAxis("Horizontal"))) >
                 percentageMaxWalkSpeedToWalkAnimation * maxWalkSpeed)
             {
-                walkInstance.start();
+                //walkInstance.start();
                 animator.SetBool("Walking", true);
             }
             else
             {
-                walkInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+                //walkInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
                 animator.SetBool("Walking", false);
             }
         }
         else
         {
-            walkInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            //walkInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
             animator.SetBool("Walking", false);
         }
     }
@@ -255,7 +255,7 @@ public class PlayerController : MonoBehaviour
                 }
                 // If the player becomes grounded their status resets to can jump
                 if (grounded) jumpStatus = JumpStatus.CAN_JUMP;
-                FMODUnity.RuntimeManager.PlayOneShot("Landing", transform.position); //lands
+                //FMODUnity.RuntimeManager.PlayOneShot("Landing", transform.position); //lands
                 break;
         }
     }
@@ -545,8 +545,8 @@ public class PlayerController : MonoBehaviour
     #region Actions
     void Spring()
     {
-        FMODUnity.RuntimeManager.PlayOneShot("Spring", transform.position); //plays the noise of the spring going off at the current location.
-        FMODUnity.RuntimeManager.PlayOneShotAttached("Spring Voiced", gameObject); //plays the noise of the character reacting to the spring, following the character
+        //FMODUnity.RuntimeManager.PlayOneShot("Spring", transform.position); //plays the noise of the spring going off at the current location.
+        //FMODUnity.RuntimeManager.PlayOneShotAttached("Spring Voiced", gameObject); //plays the noise of the character reacting to the spring, following the character
         rb.angularVelocity = 0f;
         rb.velocity = Vector2.zero;
         rb.AddForce(Vector2.up * springForce, ForceMode2D.Impulse);
@@ -596,7 +596,7 @@ public class PlayerController : MonoBehaviour
             jumpStatus = JumpStatus.HOLDING;
             // Apply an impulse force to give the player an initial boost to their jump
             rb.AddForce(Vector2.up * jumpInitialForce, ForceMode2D.Impulse);
-            FMODUnity.RuntimeManager.PlayOneShotAttached("Jumping", gameObject);
+            //FMODUnity.RuntimeManager.PlayOneShotAttached("Jumping", gameObject);
         }
         // If the player is still holding the jump key we can slow their fall by applying a force to them
         else if (jumpStatus == JumpStatus.HOLDING)

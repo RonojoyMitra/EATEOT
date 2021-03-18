@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="EffectPreset" id="{e22a73b7-0f2e-4c01-8bc1-99755e75e0fb}">
+		<property name="name">
+			<value>Green Weirdness</value>
+		</property>
+		<relationship name="folder">
+			<destination>{0e1c8460-69ab-4602-b0eb-77fb95ccbb8f}</destination>
+		</relationship>
+		<relationship name="effect">
+			<destination>{0db00758-fdc6-4029-9a68-6e0ddff4ccb9}</destination>
+		</relationship>
+	</object>
+	<object class="EffectChain" id="{0db00758-fdc6-4029-9a68-6e0ddff4ccb9}">
+		<relationship name="effects">
+			<destination>{ceec26c6-c475-4454-9f24-8f1e0a6b394d}</destination>
+		</relationship>
+	</object>
+	<object class="PitchShifterEffect" id="{ceec26c6-c475-4454-9f24-8f1e0a6b394d}">
+		<property name="pitch">
+			<value>1</value>
+		</property>
+		<property name="fftSize">
+			<value>4096</value>
+		</property>
+		<property name="overlap">
+			<value>1</value>
+		</property>
+		<relationship name="automators">
+			<destination>{31a18444-9b2a-4a2a-a23f-7821f7e243bd}</destination>
+		</relationship>
+	</object>
+	<object class="Automator" id="{31a18444-9b2a-4a2a-a23f-7821f7e243bd}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>pitch</value>
+		</property>
+		<relationship name="automationCurves">
+			<destination>{3de2f5e6-d664-423f-a466-b04994589391}</destination>
+		</relationship>
+	</object>
+	<object class="AutomationCurve" id="{3de2f5e6-d664-423f-a466-b04994589391}">
+		<relationship name="parameter">
+			<destination>{c88f0bd0-58a4-405f-9484-a44ffa8bd97a}</destination>
+		</relationship>
+		<relationship name="automationPoints">
+			<destination>{d2eba9fc-7ee9-425b-99b7-64eadac5dcc1}</destination>
+			<destination>{4f500265-f8aa-4958-a036-261f46b3c793}</destination>
+			<destination>{244c155b-6043-4af9-88e8-e750c43e5c6e}</destination>
+			<destination>{5d8cbcff-d8a4-49b3-af65-4f505716c081}</destination>
+		</relationship>
+	</object>
+	<object class="AutomationPoint" id="{d2eba9fc-7ee9-425b-99b7-64eadac5dcc1}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="value">
+			<value>1</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{4f500265-f8aa-4958-a036-261f46b3c793}">
+		<property name="position">
+			<value>1</value>
+		</property>
+		<property name="value">
+			<value>0.5</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{244c155b-6043-4af9-88e8-e750c43e5c6e}">
+		<property name="position">
+			<value>0.35000000000000003</value>
+		</property>
+		<property name="value">
+			<value>0.699999988</value>
+		</property>
+		<property name="curveShape">
+			<value>-0.0921053365</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{5d8cbcff-d8a4-49b3-af65-4f505716c081}">
+		<property name="position">
+			<value>0.15000000000000002</value>
+		</property>
+		<property name="value">
+			<value>0.839999974</value>
+		</property>
+	</object>
+</objects>

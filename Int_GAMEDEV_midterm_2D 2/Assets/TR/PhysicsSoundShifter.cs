@@ -35,9 +35,11 @@ public class PhysicsSoundShifter : MonoBehaviour
         {
             stoodOn = true;
         }
-
-        GetComponent<StudioGlobalParameterTrigger>().value += 0.001f;
-        GetComponent<StudioGlobalParameterTrigger>().TriggerParameters();
+        if (GetComponent<StudioGlobalParameterTrigger>().value < 1f)
+        {
+            GetComponent<StudioGlobalParameterTrigger>().value += 0.001f;
+            GetComponent<StudioGlobalParameterTrigger>().TriggerParameters();
+        }
         //RuntimeManager.StudioSystem.setParameterByName("Physics Weirdness", GetComponent<StudioGlobalParameterTrigger>().value + 0.01f);
         //print(GetComponent<StudioGlobalParameterTrigger>().value);
     }
