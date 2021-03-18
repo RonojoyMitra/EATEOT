@@ -211,14 +211,15 @@ MonoBehaviour:
   jumpHoldForce: 12
   coyoteTime: 0.15
   jumpBufferTime: 0.1
-  leftGCOrigin: {x: -0.5, y: -0.576}
-  rightGCOrigin: {x: 0.5, y: -0.576}
+  leftGCOrigin: {x: -0.439, y: -0.576}
+  rightGCOrigin: {x: 0.439, y: -0.576}
   gcDistance: 0.1
   wallCheckDistance: 0.05
   wallCheckOffset: 0.45
   extraGrabbingWallCheckOffset: 0.1
   timeToAutograb: 0.5
   springForce: 20
+  percentageMaxWalkSpeedToWalkAnimation: 0.15
 --- !u!212 &7707337706547910060
 SpriteRenderer:
   m_ObjectHideFlags: 0

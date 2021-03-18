@@ -12,6 +12,7 @@ TagManager:
   - Door
   - VanishingBlock
   - Spring
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX
