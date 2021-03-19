@@ -26,9 +26,9 @@ public class AudioEventTrigger : MonoBehaviour
         {
             myManager.targetRed = myTargetRed;
         }
-        if (myManager.targertGreen < myTargetGreen)
+        if (myManager.targetGreen < myTargetGreen)
         {
-            myManager.targertGreen = myTargetGreen;
+            myManager.targetGreen = myTargetGreen;
         }
         if (myManager.targetBlue < myTargetBlue)
         {

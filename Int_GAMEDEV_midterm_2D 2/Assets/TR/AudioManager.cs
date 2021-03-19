@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public float targetRed, targertGreen, targetBlue, currentRed, currentGreen, currentBlue;
+    public float targetRed, targetGreen, targetBlue, currentRed, currentGreen, currentBlue;
     void Awake()
     {
         //DontDestroyOnLoad(gameObject); //Setting the audiomanager object to dontdestroyonload so we can choose to have sounds transition smoothly across scenes
@@ -13,7 +13,15 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        targetRed = 0;
+        currentRed = targetRed;
+        targetGreen = 0;
+        currentGreen = targetGreen;
+        targetBlue = 0;
+        currentBlue = targetBlue;
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Red Weirdness", currentRed);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Green Weirdness", currentGreen);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Blue Weirdness", currentBlue);
     }
 
     // Update is called once per frame
@@ -24,7 +32,8 @@ public class AudioManager : MonoBehaviour
             currentRed += 0.01f;
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Red Weirdness", currentRed);
         }
-        if (currentGreen < targertGreen)
+        if (currentGreen < targetGreen)
+        if (currentGreen < targetGreen)
         {
             currentGreen += 0.01f;
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Green Weirdness", currentGreen);
