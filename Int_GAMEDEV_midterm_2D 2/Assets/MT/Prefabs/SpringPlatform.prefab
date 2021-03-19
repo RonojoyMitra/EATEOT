@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 5729412728352535676}
   - component: {fileID: 5729412728352535677}
   - component: {fileID: 5729412728352535675}
+  - component: {fileID: 64721030702710482}
+  - component: {fileID: 294961990467972938}
   m_Layer: 0
   m_Name: SpringPlatform
   m_TagString: Physics platform
@@ -227,3 +229,34 @@ DistanceJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 0.25
   m_MaxDistanceOnly: 1
+--- !u!114 &64721030702710482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5729412728352535668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fed13203b45b04146be1c36b498ec042, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stoodOn: 0
+  myWeirdness: 0
+  totalWeirdness: 0
+--- !u!114 &294961990467972938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5729412728352535668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  parameter: Physics Weirdness
+  TriggerEvent: 0
+  value: 0
