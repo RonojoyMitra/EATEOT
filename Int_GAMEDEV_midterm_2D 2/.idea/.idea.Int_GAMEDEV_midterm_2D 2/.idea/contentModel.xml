@@ -18,6 +18,7 @@
             <e p="PlayerController.cs" t="Include" />
             <e p="PressurePlate.cs" t="Include" />
             <e p="SceneController.cs" t="Include" />
+            <e p="Shellspiner.cs" t="Include" />
             <e p="VanishingBlock.cs" t="Include" />
             <e p="WeirdnessReader.cs" t="Include" />
           </e>
