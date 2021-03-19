@@ -1,0 +1,468 @@
+fileFormatVersion: 2
+guid: 2ece7526239e94f43a97429775622639
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7431777332142576429
+    second: spr_friend_SCENE3_final_0
+  - first:
+      213: 9148200201308852838
+    second: spr_friend_SCENE3_final_1
+  - first:
+      213: 9112358387652420530
+    second: spr_friend_SCENE3_final_2
+  - first:
+      213: -1997999595100195022
+    second: spr_friend_SCENE3_final_3
+  - first:
+      213: 6438475382863812893
+    second: spr_friend_SCENE3_final_4
+  - first:
+      213: -2701456738195601551
+    second: spr_friend_SCENE3_final_5
+  - first:
+      213: -5140879856429779779
+    second: spr_friend_SCENE3_final_6
+  - first:
+      213: -2218580615554559691
+    second: spr_friend_SCENE3_final_7
+  - first:
+      213: 250177549244672872
+    second: spr_friend_SCENE3_final_8
+  - first:
+      213: -1520845120706420154
+    second: spr_friend_SCENE3_final_9
+  - first:
+      213: -5151223568600719376
+    second: spr_friend_SCENE3_final_10
+  - first:
+      213: 1010204105262995873
+    second: spr_friend_SCENE3_final_11
+  - first:
+      213: -4389913550738893213
+    second: spr_friend_SCENE3_final_12
+  - first:
+      213: 2072437033273304150
+    second: spr_friend_SCENE3_final_13
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: spr_friend_SCENE3_final_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 15
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d23982cbb1af22760800000000000000
+      internalID: 7431777332142576429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE3_final_1
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 0
+        width: 17
+        height: 47
+      alignment: 9
+      pivot: {x: 0.4349675, y: 0.49999988}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 662db252d9fe4fe70800000000000000
+      internalID: 9148200201308852838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE3_final_2
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 19
+        height: 47
+      alignment: 9
+      pivot: {x: 0.40413165, y: 0.49999997}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3e21a9ca9957e70800000000000000
+      internalID: 9112358387652420530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE3_final_3
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 0
+        width: 23
+        height: 47
+      alignment: 9
+      pivot: {x: 0.32859272, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 237bda044fda544e0800000000000000
+      internalID: -1997999595100195022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE3_final_4
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 0
+        width: 20
+        height: 47
+      alignment: 9
+      pivot: {x: 0.38087767, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d19d1ba8f3f0a5950800000000000000
+      internalID: 6438475382863812893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE3_final_5
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 0
+        width: 22
+        height: 47
+      alignment: 9
+      pivot: {x: 0.34592578, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17704c7d86f728ad0800000000000000
+      internalID: -2701456738195601551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE3_final_6
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 0
+        width: 22
+        height: 47
+      alignment: 9
+      pivot: {x: 0.34337476, y: 0.50111175}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db4ba84120de7a8b0800000000000000
+      internalID: -5140879856429779779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE3_final_7
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 0
+        width: 22
+        height: 47
+      alignment: 9
+      pivot: {x: 0.3368974, y: 0.49768305}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5319d484fa40631e0800000000000000
+      internalID: -2218580615554559691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE3_final_8
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 0
+        width: 22
+        height: 47
+      alignment: 9
+      pivot: {x: 0.33141395, y: 0.49935767}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86ba181d72fc87300800000000000000
+      internalID: 250177549244672872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE3_final_9
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 0
+        width: 22
+        height: 47
+      alignment: 9
+      pivot: {x: 0.33170664, y: 0.48609856}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64268e5ab6fd4eae0800000000000000
+      internalID: -1520845120706420154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE3_final_10
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 0
+        width: 22
+        height: 47
+      alignment: 9
+      pivot: {x: 0.33151662, y: 0.4999999}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ff1feae47d2388b0800000000000000
+      internalID: -5151223568600719376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE3_final_11
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 0
+        width: 22
+        height: 47
+      alignment: 9
+      pivot: {x: 0.33633006, y: 0.49324012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a997dc0847f40e00800000000000000
+      internalID: 1010204105262995873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE3_final_12
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 0
+        width: 22
+        height: 47
+      alignment: 9
+      pivot: {x: 0.33633006, y: 0.49549338}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 366d88562e4e313c0800000000000000
+      internalID: -4389913550738893213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE3_final_13
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 0
+        width: 22
+        height: 47
+      alignment: 9
+      pivot: {x: 0.33633006, y: 0.4999999}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 654ae936086c2cc10800000000000000
+      internalID: 2072437033273304150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
