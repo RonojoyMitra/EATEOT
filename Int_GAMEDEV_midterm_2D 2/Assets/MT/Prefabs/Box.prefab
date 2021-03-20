@@ -47,9 +47,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugging: 0
-  leftGCOrigin: {x: -0.99, y: -1.01}
-  rightGCOrigin: {x: 0.99, y: -1.01}
+  leftGCOrigin: {x: -0.802, y: -0.804}
+  rightGCOrigin: {x: 0.802, y: -0.804}
   gcDistance: 0.2
+  isAlive: 1
+  moving: 0
+  timeToMove: 3
+  moveSpeed: 1
 --- !u!212 &7516519437881667203
 SpriteRenderer:
   m_ObjectHideFlags: 0

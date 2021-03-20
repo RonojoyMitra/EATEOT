@@ -708,6 +708,12 @@ public class PlayerController : MonoBehaviour
     #endregion
 
     #region Miscellaneous
+
+    public bool CompareToGrabbedBox(BoxController box)
+    {
+        return box.transform == grabbedBox;
+    }
+    
     /// <summary>
     /// Updates the grounded boolean.
     /// This is done to reduce the amount of times that the GroundCheck function is called.
