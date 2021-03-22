@@ -1,335 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9061741221574620871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Level 1 Music/Blue Weirdness
-  m_EditorClassIdentifier: 
-  Name: Blue Weirdness
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-8814939818176617492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Blue Weirdness
-  m_EditorClassIdentifier: 
-  Name: Blue Weirdness
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 133283542
-    data2: 155475875
-  Exists: 1
---- !u!114 &-8427412425345564194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Blue Weirdness
-  m_EditorClassIdentifier: 
-  Name: Blue Weirdness
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 133283542
-    data2: 155475875
-  Exists: 1
---- !u!114 &-7460824387440797207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Level 1 Music/Blue Weirdness
-  m_EditorClassIdentifier: 
-  Name: Blue Weirdness
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &-6478904923232741332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Green Weirdness
-  m_EditorClassIdentifier: 
-  Name: Green Weirdness
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2476255808
-    data2: 1332992834
-  Exists: 1
---- !u!114 &-6076158324174719647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Red Weirdness
-  m_EditorClassIdentifier: 
-  Name: Red Weirdness
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2108905912
-    data2: 2779935656
-  Exists: 1
---- !u!114 &-4357666207092854785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Level 1 Music
-  m_EditorClassIdentifier: 
-  Path: event:/Level 1 Music
-  guid: 67f5e51823d4b34b9cb71690b34514b5
-  Banks:
-  - {fileID: -210650102919726279}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 210504
---- !u!114 &-4013136208908542711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: EATEOT/Build/Desktop/Master.bank
-  Name: Master
-  lastModified: 637516043330000000
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-3702090421975278948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Red Weirdness
-  m_EditorClassIdentifier: 
-  Name: Red Weirdness
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2108905912
-    data2: 2779935656
-  Exists: 1
---- !u!114 &-3380362952953549054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Level 1 Music/Green Weirdness
-  m_EditorClassIdentifier: 
-  Name: Green Weirdness
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &-3095532801969792048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Green Weirdness
-  m_EditorClassIdentifier: 
-  Name: Green Weirdness
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2476255808
-    data2: 1332992834
-  Exists: 1
---- !u!114 &-2577048462072443858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Green Weirdness
-  m_EditorClassIdentifier: 
-  Name: Green Weirdness
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2476255808
-    data2: 1332992834
-  Exists: 1
---- !u!114 &-1266390486964169467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Level 1 Music/Red Weirdness
-  m_EditorClassIdentifier: 
-  Name: Red Weirdness
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &-318180391682612464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Level 1 Music
-  m_EditorClassIdentifier: 
-  Path: event:/Level 1 Music
-  guid: 67f5e51823d4b34b9cb71690b34514b5
-  Banks:
-  - {fileID: 8154396448865893230}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 210504
---- !u!114 &-210650102919726279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: ../../FMOD Studio/EATEOT/Build/Desktop/Master.bank
-  Name: Master
-  lastModified: 637505488866750804
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
-  m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: 732462167106406658}
-  - {fileID: -4013136208908542711}
-  EditorEvents:
-  - {fileID: 5879097338450415069}
-  EditorParameters:
-  - {fileID: 4354807874370437225}
-  - {fileID: 1275348099975914893}
-  - {fileID: -2577048462072443858}
-  MasterBanks:
-  - {fileID: -4013136208908542711}
-  StringsBanks:
-  - {fileID: 732462167106406658}
-  stringsBankWriteTime: 637516043330000000
-  cacheVersion: 5
---- !u!114 &732462167106406658
+--- !u!114 &-6338594996419239354
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -347,27 +18,7 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
---- !u!114 &1275348099975914893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Red Weirdness
-  m_EditorClassIdentifier: 
-  Name: Red Weirdness
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2108905912
-    data2: 2779935656
-  Exists: 1
---- !u!114 &1857427894353617533
+--- !u!114 &-5480884236844296679
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -379,13 +30,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
-  Path: ../../FMOD Studio/EATEOTSounds/Build/Desktop/Master.bank
+  Path: EATEOT/Build/Desktop/Master.bank
   Name: Master
-  lastModified: 637501351631075635
+  lastModified: 637516043330000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
---- !u!114 &2628897341314440108
+--- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -394,18 +45,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
-  Path: ../../FMOD Studio/EATEOTSounds/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  lastModified: 637501351631135696
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 700
-  Exists: 1
---- !u!114 &2912889331637345766
+  EditorBanks:
+  - {fileID: -6338594996419239354}
+  - {fileID: -5480884236844296679}
+  EditorEvents:
+  - {fileID: 2218390534295308491}
+  EditorParameters:
+  - {fileID: 3223765499369739525}
+  - {fileID: 7078798412513775960}
+  - {fileID: 8393902254763224801}
+  MasterBanks:
+  - {fileID: -5480884236844296679}
+  StringsBanks:
+  - {fileID: -6338594996419239354}
+  stringsBankWriteTime: 637516043330000000
+  cacheVersion: 5
+--- !u!114 &2218390534295308491
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -414,58 +72,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Level 1 Music
   m_EditorClassIdentifier: 
-  Path: ../../FMOD Studio/EATEOT/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  lastModified: 637505488867154939
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 948
-  Exists: 1
---- !u!114 &3336365838905661161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Level 1 Music/Green Weirdness
-  m_EditorClassIdentifier: 
-  Name: Green Weirdness
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
---- !u!114 &4283730694417864651
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Level 1 Music/Noise
-  m_EditorClassIdentifier: 
-  Name: Noise
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &4354807874370437225
+  Path: event:/Level 1 Music
+  guid: 67f5e51823d4b34b9cb71690b34514b5
+  Banks:
+  - {fileID: -5480884236844296679}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 210504
+--- !u!114 &3223765499369739525
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -485,68 +106,7 @@ MonoBehaviour:
     data1: 133283542
     data2: 155475875
   Exists: 1
---- !u!114 &5879097338450415069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Level 1 Music
-  m_EditorClassIdentifier: 
-  Path: event:/Level 1 Music
-  guid: 67f5e51823d4b34b9cb71690b34514b5
-  Banks:
-  - {fileID: -4013136208908542711}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 210504
---- !u!114 &8154396448865893230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: ../../FMOD Studio/EATEOT/Build/Desktop/Master.bank
-  Name: Master
-  lastModified: 637505488866750804
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &8489845518168370664
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: ../../FMOD Studio/EATEOT/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  lastModified: 637505488867154939
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 948
-  Exists: 1
---- !u!114 &8836888805800899605
+--- !u!114 &7078798412513775960
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -556,13 +116,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Level 1 Music/Red Weirdness
+  m_Name: parameter:/Red Weirdness
   m_EditorClassIdentifier: 
   Name: Red Weirdness
   Min: 0
   Max: 1
   Default: 0
   ID:
-    data1: 0
-    data2: 0
-  Exists: 0
+    data1: 2108905912
+    data2: 2779935656
+  Exists: 1
+--- !u!114 &8393902254763224801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Green Weirdness
+  m_EditorClassIdentifier: 
+  Name: Green Weirdness
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2476255808
+    data2: 1332992834
+  Exists: 1

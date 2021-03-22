@@ -20,10 +20,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/OG_Scenes/scn_start.unity
     guid: 3bc95707b01a34bf4901c0d8f93cc185
-  - enabled: 1
-    path: Assets/RM/Scenes/Experimental Stage1 Level-1.unity
+  - enabled: 0
+    path: Assets/RM/Scenes/Experimental Stage1 Level-2.unity
     guid: cd97b1a0ceafc9048aa79d1e62c4fac3
   - enabled: 1
-    path: Assets/_MAIN/Section1.unity
+    path: Assets/RM/Scenes/Experimental Stage1 Level-1 1.unity
+    guid: ac91fcd2e8eced647a1bb4a074d6dbb6
+  - enabled: 1
+    path: Assets/RM/Scenes/Section1.unity
     guid: ffd107e1443776b43946a49bc098cd4a
   m_configObjects: {}
