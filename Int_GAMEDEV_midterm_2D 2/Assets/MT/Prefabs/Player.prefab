@@ -152,7 +152,7 @@ Transform:
   m_GameObject: {fileID: 7707337706547910066}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.86842114, y: 0.8684211, z: 0.8684211}
   m_Children:
   - {fileID: 1905221301}
   m_Father: {fileID: 0}
@@ -211,8 +211,8 @@ MonoBehaviour:
   jumpHoldForce: 12
   coyoteTime: 0.15
   jumpBufferTime: 0.1
-  leftGCOrigin: {x: -0.439, y: -0.576}
-  rightGCOrigin: {x: 0.439, y: -0.576}
+  leftGCOrigin: {x: -0.38, y: -0.501}
+  rightGCOrigin: {x: 0.38, y: -0.501}
   gcDistance: 0.1
   wallCheckDistance: 0.05
   wallCheckOffset: 0.45
