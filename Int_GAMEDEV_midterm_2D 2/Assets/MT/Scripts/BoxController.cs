@@ -58,8 +58,6 @@ public class BoxController : MonoBehaviour
         {
             Move();
         }
-        
-        Debug.Log(rb.velocity);
     }
 
     void Update()
