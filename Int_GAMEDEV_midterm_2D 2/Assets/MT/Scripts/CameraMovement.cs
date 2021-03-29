@@ -21,18 +21,22 @@ public class CameraMovement : MonoBehaviour
     [Tooltip("The time value used while lerping toward the target. A higher value will have the camera move toward the target faster.")]
     float lerpPercent;
 
-    Transform currentAnchor = null;
-
-    float anchorTimer = 0f;
+    private List<Transform> anchors = new List<Transform>();
 
     // This is called in LateUpdate to avoid any jittering from the camera's movement happening at an arbitrary time relative to other objects' movement
     void LateUpdate()
     {
         Transform mem = target;
+        float memDX = maxDeltaX;
+        float memDYP = maxDeltaYPos;
+        float memDYN = maxDeltaYNeg;
 
-        if(currentAnchor != null)
+        if(anchors.Count > 0)
         {
-            target = currentAnchor;
+            target = anchors[anchors.Count - 1];
+            maxDeltaX = 0f;
+            maxDeltaYNeg = 0f;
+            maxDeltaYPos = 0f;
         }
 
         Vector3 t = transform.position;
@@ -48,17 +52,18 @@ public class CameraMovement : MonoBehaviour
 
         transform.position = Vector3.Lerp(transform.position, t, lerpPercent);
         target = mem;
-
-        anchorTimer += Time.deltaTime;
-        if(anchorTimer > 0.25f)
-        {
-            currentAnchor = null;
-        }
+        maxDeltaX = memDX;
+        maxDeltaYNeg = memDYN;
+        maxDeltaYPos = memDYP;
     }
 
     public void Anchor(Transform anchor)
     {
-        currentAnchor = anchor;
-        anchorTimer = 0f;
+        anchors.Add(anchor);
+    }
+
+    public void Deanchor(Transform anchor)
+    {
+        anchors.Remove(anchor);
     }
 }
