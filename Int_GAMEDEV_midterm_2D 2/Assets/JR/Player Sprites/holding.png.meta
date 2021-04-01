@@ -1,34 +1,19 @@
 fileFormatVersion: 2
-guid: 91f7cc9ba2f874cbd96a2f46c6f9532d
+guid: 3c99e77593dbb4ac9be40aacee21580c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3902250543768078526
-    second: pushing_0
+      213: 2767496150357596284
+    second: holding_0
   - first:
-      213: 928460852293749866
-    second: pushing_1
+      213: 3831271297870293176
+    second: holding_1
   - first:
-      213: 3026909068232351360
-    second: pushing_2
+      213: -3838146068379737069
+    second: holding_2
   - first:
-      213: 3269166556148948487
-    second: pushing_3
-  - first:
-      213: -6109940595536812158
-    second: pushing_4
-  - first:
-      213: -4452741279303938447
-    second: pushing_5
-  - first:
-      213: -5155114118377575003
-    second: pushing_6
-  - first:
-      213: -531833808187230979
-    second: pushing_7
-  - first:
-      213: 8347169926769563517
-    second: pushing_8
+      213: -4190978033386431930
+    second: holding_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -130,190 +115,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pushing_0
+      name: holding_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 5
-        width: 31
-        height: 43
-      alignment: 9
-      pivot: {x: 0.5322581, y: 0.44186047}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 247f0223ecb68d9c0800000000000000
-      internalID: -3902250543768078526
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pushing_1
-      rect:
-        serializedVersion: 2
-        x: 47
-        y: 5
-        width: 32
-        height: 43
-      alignment: 9
-      pivot: {x: 0.546875, y: 0.44186047}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a6c43d8d93e82ec00800000000000000
-      internalID: 928460852293749866
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pushing_2
-      rect:
-        serializedVersion: 2
-        x: 93
-        y: 5
-        width: 33
-        height: 43
-      alignment: 9
-      pivot: {x: 0.56060606, y: 0.44186047}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 08ed563a2cdb10a20800000000000000
-      internalID: 3026909068232351360
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pushing_3
-      rect:
-        serializedVersion: 2
-        x: 140
+        x: 4
         y: 4
-        width: 31
-        height: 44
+        width: 52
+        height: 54
       alignment: 9
-      pivot: {x: 0.5322581, y: 0.4318182}
+      pivot: {x: 0.72115386, y: 0.35185185}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70e58da79a96e5d20800000000000000
-      internalID: 3269166556148948487
+      spriteID: c78535ff51f186620800000000000000
+      internalID: 2767496150357596284
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pushing_4
+      name: holding_1
       rect:
         serializedVersion: 2
-        x: 188
-        y: 5
-        width: 31
-        height: 43
-      alignment: 9
-      pivot: {x: 0.5322581, y: 0.44186047}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2872a447661253ba0800000000000000
-      internalID: -6109940595536812158
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pushing_5
-      rect:
-        serializedVersion: 2
-        x: 231
-        y: 5
-        width: 31
-        height: 43
-      alignment: 9
-      pivot: {x: 0.5322581, y: 0.44186047}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 17ece5ae56fa432c0800000000000000
-      internalID: -4452741279303938447
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pushing_6
-      rect:
-        serializedVersion: 2
-        x: 275
-        y: 5
-        width: 32
-        height: 43
-      alignment: 9
-      pivot: {x: 0.546875, y: 0.44186047}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5ade085b50b5578b0800000000000000
-      internalID: -5155114118377575003
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pushing_7
-      rect:
-        serializedVersion: 2
-        x: 322
+        x: 56
         y: 4
-        width: 32
-        height: 44
+        width: 52
+        height: 54
       alignment: 9
-      pivot: {x: 0.546875, y: 0.4318182}
+      pivot: {x: 0.72115386, y: 0.35185185}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df4f47f18fb8e98f0800000000000000
-      internalID: -531833808187230979
+      spriteID: 8b865bb42f86b2530800000000000000
+      internalID: 3831271297870293176
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pushing_8
+      name: holding_2
       rect:
         serializedVersion: 2
-        x: 366
-        y: 5
-        width: 32
-        height: 43
+        x: 108
+        y: 4
+        width: 47
+        height: 54
       alignment: 9
-      pivot: {x: 0.546875, y: 0.44186047}
+      pivot: {x: 0.69184357, y: 0.35185173}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d775cecb2da17d370800000000000000
-      internalID: 8347169926769563517
+      spriteID: 314e9267c7a2cbac0800000000000000
+      internalID: -3838146068379737069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: holding_3
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 4
+        width: 52
+        height: 54
+      alignment: 9
+      pivot: {x: 0.72115386, y: 0.35185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64a5982fea7a6d5c0800000000000000
+      internalID: -4190978033386431930
       vertices: []
       indices: 
       edges: []

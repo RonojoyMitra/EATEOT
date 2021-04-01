@@ -1,7 +1,37 @@
 fileFormatVersion: 2
 guid: 229c97d324d4e4f33bf0b32f4f807f94
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -3722017793606235749
+    second: pulling_0
+  - first:
+      213: 3144617221696498153
+    second: pulling_1
+  - first:
+      213: 5492850125689072414
+    second: pulling_2
+  - first:
+      213: 4350383500548832398
+    second: pulling_3
+  - first:
+      213: 208055209953788133
+    second: pulling_4
+  - first:
+      213: 5887688451429846655
+    second: pulling_5
+  - first:
+      213: 641443333361154525
+    second: pulling_6
+  - first:
+      213: -456919417958841316
+    second: pulling_7
+  - first:
+      213: 9055491117834609354
+    second: pulling_8
+  - first:
+      213: -4660071889873030310
+    second: pulling_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +62,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -41,12 +71,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 33
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,9 +105,243 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: pulling_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 5
+        width: 35
+        height: 54
+      alignment: 9
+      pivot: {x: 0.5857143, y: 0.35185185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b99ca6c698cb85cc0800000000000000
+      internalID: -3722017793606235749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pulling_1
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 5
+        width: 35
+        height: 54
+      alignment: 9
+      pivot: {x: 0.5703005, y: 0.3605929}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e9abc5c3bce3ab20800000000000000
+      internalID: 3144617221696498153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pulling_2
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 5
+        width: 36
+        height: 54
+      alignment: 9
+      pivot: {x: 0.5858529, y: 0.35268134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1b282246168a3c40800000000000000
+      internalID: 5492850125689072414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pulling_3
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 5
+        width: 35
+        height: 54
+      alignment: 9
+      pivot: {x: 0.5631522, y: 0.35089222}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8cfee29ebaaf5c30800000000000000
+      internalID: 4350383500548832398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pulling_4
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 5
+        width: 35
+        height: 54
+      alignment: 9
+      pivot: {x: 0.558163, y: 0.34254992}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e007f27c1923e200800000000000000
+      internalID: 208055209953788133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pulling_5
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 5
+        width: 35
+        height: 54
+      alignment: 9
+      pivot: {x: 0.55950755, y: 0.33498082}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7e45a7c37545b150800000000000000
+      internalID: 5887688451429846655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pulling_6
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 5
+        width: 35
+        height: 54
+      alignment: 9
+      pivot: {x: 0.5685852, y: 0.3388575}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd9b88c205dd6e800800000000000000
+      internalID: 641443333361154525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pulling_7
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 5
+        width: 35
+        height: 54
+      alignment: 9
+      pivot: {x: 0.56293947, y: 0.33274427}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c14c591d532b8a9f0800000000000000
+      internalID: -456919417958841316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pulling_8
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 5
+        width: 35
+        height: 54
+      alignment: 9
+      pivot: {x: 0.54405606, y: 0.3572207}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac2ac3191319bad70800000000000000
+      internalID: 9055491117834609354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pulling_9
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 5
+        width: 35
+        height: 54
+      alignment: 9
+      pivot: {x: 0.56293947, y: 0.3449825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a53b5586e49145fb0800000000000000
+      internalID: -4660071889873030310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
