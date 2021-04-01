@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TreeEditor;
 using UnityEngine;
+using UnityEngine.Networking.PlayerConnection;
 
 public class BoxController : MonoBehaviour
 {
@@ -24,6 +27,18 @@ public class BoxController : MonoBehaviour
 
     string[] groundTags;
 
+    [Header("Snail")]
+    [SerializeField]
+    private bool isAlive = false;
+    [SerializeField] private bool moving = false;
+    [SerializeField]
+    private float timeToMove;
+    private float moveTimer = 0f;
+    private int direction = -1;
+    [SerializeField] private float moveSpeed;
+
+    private bool offLeft, offRight;
+
     private void Start()
     {
         groundTags = PlayerController.groundTags;
@@ -38,6 +53,68 @@ public class BoxController : MonoBehaviour
             lPlatform.SendMessage("RegisterBox", gameObject);
         if (rPlatform != null && lPlatform != rPlatform)
             rPlatform.SendMessage("RegisterBox", gameObject);*/
+
+        if (moving)
+        {
+            Move();
+        }
+    }
+
+    void Update()
+    {
+        if (isAlive && !moving && PlayerController.instance.CompareToGrabbedBox(this) == false)
+        {
+            moveTimer += Time.deltaTime;
+            if (moveTimer > timeToMove)
+            {
+                moving = true;
+                moveTimer = 0f;
+            }
+        }
+
+        if (PlayerController.instance.CompareToGrabbedBox(this))
+        {
+            moveTimer = 0f;
+            moving = false;
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D other)
+    {
+        ContactPoint2D[] contacts = new ContactPoint2D[other.contactCount];
+        other.GetContacts(contacts);
+        for (int i = 0; i < contacts.Length; i++)
+        {
+            if (direction == 1
+                ? contacts[i].point.x > transform.position.x
+                : contacts[i].point.x < transform.position.x)
+            {
+                if (contacts[i].point.y > transform.position.y)
+                {
+                    direction = -direction;
+                    return;
+                }
+            }
+        }
+    }
+
+    void Move()
+    {
+        if (direction == 1 && offRight)
+        {
+            direction = -1;
+        }
+        else if (direction == -1 && offLeft)
+        {
+            direction = 1;
+        }
+            
+        Vector2 d = direction == 1 ? Vector2.right : Vector2.left;
+        float f = moveSpeed * Time.deltaTime;
+        //float dist = moveSpeed * Time.deltaTime;
+        //Vector2 movement = d * dist;
+        //Vector2 np = (Vector2) transform.position + movement;
+        rb.velocity = new Vector2(direction == 1 ? moveSpeed : -moveSpeed, 0);
     }
 
     #region Physics Checks
@@ -59,6 +136,10 @@ public class BoxController : MonoBehaviour
 
         RaycastHit2D l = Physics2D.Raycast(rb.position + leftGCOrigin, Vector2.down, gcDistance);
         RaycastHit2D r = Physics2D.Raycast(rb.position + rightGCOrigin, Vector2.down, gcDistance);
+
+        offLeft = l.collider == null ? true : false;
+        offRight = r.collider == null ? true : false;
+        
         if (l.collider != null)
         {
             if (GroundTagCheck(l.collider.tag))
