@@ -123,6 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD:Int_GAMEDEV_midterm_2D 2/Assets/_MAIN/Section1.unity
 --- !u!1001 &140503654
 PrefabInstance:
@@ -207,6 +208,8 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 6429cdd53f7c28042800e0e06495bbfe, type: 3}
 =======
 >>>>>>> 86f77c48102c121e7c1021786f2b3c658e07d40b:Int_GAMEDEV_midterm_2D 2/Assets/RM/Scenes/Section1.unity
+=======
+>>>>>>> b2d91af67ca39933316f46709b5b59de97bf9c27
 --- !u!1 &482067901
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,6 +398,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7707337706547910063, guid: f7ebb0a647e434e419abb6d4553dcdaa, type: 3}
   m_PrefabInstance: {fileID: 584370758}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD:Int_GAMEDEV_midterm_2D 2/Assets/_MAIN/Section1.unity
 --- !u!1001 &1073737084
 PrefabInstance:
@@ -649,6 +653,8 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 6429cdd53f7c28042800e0e06495bbfe, type: 3}
 =======
 >>>>>>> 86f77c48102c121e7c1021786f2b3c658e07d40b:Int_GAMEDEV_midterm_2D 2/Assets/RM/Scenes/Section1.unity
+=======
+>>>>>>> b2d91af67ca39933316f46709b5b59de97bf9c27
 --- !u!1 &1445437837
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,6 +699,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD:Int_GAMEDEV_midterm_2D 2/Assets/_MAIN/Section1.unity
 --- !u!1001 &1555190061
 PrefabInstance:
@@ -777,6 +784,8 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 6429cdd53f7c28042800e0e06495bbfe, type: 3}
 =======
 >>>>>>> 86f77c48102c121e7c1021786f2b3c658e07d40b:Int_GAMEDEV_midterm_2D 2/Assets/RM/Scenes/Section1.unity
+=======
+>>>>>>> b2d91af67ca39933316f46709b5b59de97bf9c27
 --- !u!1001 &1612031611
 PrefabInstance:
   m_ObjectHideFlags: 0

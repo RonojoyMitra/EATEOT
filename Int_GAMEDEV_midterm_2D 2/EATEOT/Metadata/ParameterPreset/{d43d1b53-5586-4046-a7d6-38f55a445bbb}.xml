@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{d43d1b53-5586-4046-a7d6-38f55a445bbb}">
+		<property name="name">
+			<value>Physics Weirdness</value>
+		</property>
+		<relationship name="folder">
+			<destination>{27dbb745-cd35-4193-afa3-460e7fd4633a}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{eea4c650-f987-43e2-ac9e-daadf0f71b6a}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{eea4c650-f987-43e2-ac9e-daadf0f71b6a}">
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

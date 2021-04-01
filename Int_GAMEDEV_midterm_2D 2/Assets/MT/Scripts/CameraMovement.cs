@@ -61,4 +61,11 @@ public class CameraMovement : MonoBehaviour
         currentAnchor = anchor;
         anchorTimer = 0f;
     }
+
+    public void ChangeMaxDeltas(float newMaxDeltaX, float newMaxDeltaYPos, float newMaxDeltaYNeg)
+    {
+        maxDeltaX = newMaxDeltaX;
+        maxDeltaYPos = newMaxDeltaYPos;
+        maxDeltaYNeg = newMaxDeltaYNeg;
+    }
 }
