@@ -111,7 +111,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Walk();
-        Autograb();
+        //Autograb();
         UpdateJumpBuffer();
         UpdateJumpStatus();
         UpdateFacing();
