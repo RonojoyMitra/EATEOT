@@ -22,17 +22,21 @@ public class AudioEventTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (myManager.targetRed < myTargetRed)
+        if (other.CompareTag("Player"))
         {
-            myManager.targetRed = myTargetRed;
-        }
-        if (myManager.targetGreen < myTargetGreen)
-        {
-            myManager.targetGreen = myTargetGreen;
-        }
-        if (myManager.targetBlue < myTargetBlue)
-        {
-            myManager.targetBlue = myTargetBlue;
+            if (myManager.targetRed < myTargetRed)
+            {
+                myManager.targetRed = myTargetRed;
+            }
+            if (myManager.targetGreen < myTargetGreen)
+            {
+                myManager.targetGreen = myTargetGreen;
+            }
+            if (myManager.targetBlue < myTargetBlue)
+            {
+                myManager.targetBlue = myTargetBlue;
+            }
+            Destroy(gameObject);
         }
     }
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 599982703268007160}
   - component: {fileID: 5755765463700658561}
   - component: {fileID: 6898474524141906441}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Audio Event Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,6 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b6a16e4c5d04b94cbff59b2442c0824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myTargetRed: 0
+  myTargetGreen: 0
+  myTargetBlue: 0
 --- !u!61 &6898474524141906441
 BoxCollider2D:
   m_ObjectHideFlags: 0
