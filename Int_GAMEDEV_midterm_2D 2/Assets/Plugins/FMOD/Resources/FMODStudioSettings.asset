@@ -84,7 +84,7 @@ MonoBehaviour:
       Value: 0
       HasValue: 0
     SampleRate:
-      Value: 22050
+      Value: 48000
       HasValue: 1
     BuildDirectory:
       Value: 

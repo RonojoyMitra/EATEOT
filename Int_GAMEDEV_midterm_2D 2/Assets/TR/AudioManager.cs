@@ -32,17 +32,34 @@ public class AudioManager : MonoBehaviour
         if (currentRed < targetRed)
         {
             currentRed += 0.01f;
+            if (currentRed > targetRed)
+            {
+                currentRed = targetRed;
+            }
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Red Weirdness", currentRed);
         }
         if (currentGreen < targetGreen)
         {
             currentGreen += 0.01f;
+            if (currentGreen > targetGreen)
+            {
+                currentGreen = targetGreen;
+            }
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Green Weirdness", currentGreen);
         }
         if (currentBlue < targetBlue)
         {
             currentBlue += 0.01f;
+            if (currentBlue > targetBlue)
+            {
+                currentBlue = targetBlue;
+            }
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Blue Weirdness", currentBlue);
+        }
+
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
         }
     }
 }
