@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7516519437881667204}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.89, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.245283, y: 1.245283, z: 1.245283}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -46,10 +46,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081486cb16075b247be366739e3a071e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugging: 0
-  leftGCOrigin: {x: -0.99, y: -1.01}
-  rightGCOrigin: {x: 0.99, y: -1.01}
+  debugging: 1
+  leftGCOrigin: {x: -1, y: -1}
+  rightGCOrigin: {x: 1, y: -1}
   gcDistance: 0.2
+  isAlive: 0
+  moving: 0
+  timeToMove: 3
+  moveSpeed: 1
 --- !u!212 &7516519437881667203
 SpriteRenderer:
   m_ObjectHideFlags: 0

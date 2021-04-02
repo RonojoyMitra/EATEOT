@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9061741221574620871
+--- !u!114 &-7611394196083651359
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,6 +20,29 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-9042018507149341014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spring Voiced
+  m_EditorClassIdentifier: 
+  Path: event:/Spring Voiced
+  guid: fb30b708b471944e9a682ebfb4c06a9f
+  Banks:
+  - {fileID: -4013136208908542711}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-8814939818176617492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,30 +103,7 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
---- !u!114 &-7179295434563347283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Landing
-  m_EditorClassIdentifier: 
-  Path: event:/Landing
-  guid: 739f874f2872f942b644b11c3665383d
-  Banks:
-  - {fileID: -4013136208908542711}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-7142406531495575771
+--- !u!114 &-6608665457790249480
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,6 +126,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-6590694262051071968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Physics Weirdness
+  m_EditorClassIdentifier: 
+  Name: Physics Weirdness
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2594294010
+    data2: 2733659213
+  Exists: 1
 --- !u!114 &-6478904923232741332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,6 +186,29 @@ MonoBehaviour:
     data1: 2108905912
     data2: 2779935656
   Exists: 1
+--- !u!114 &-5596285661764786517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Landing
+  m_EditorClassIdentifier: 
+  Path: event:/Landing
+  guid: 739f874f2872f942b644b11c3665383d
+  Banks:
+  - {fileID: -4013136208908542711}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-4357666207092854785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,7 +224,7 @@ MonoBehaviour:
   Path: event:/Level 1 Music
   guid: 67f5e51823d4b34b9cb71690b34514b5
   Banks:
-  - {fileID: -210650102919726279}
+  - {fileID: 853276005810638444}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -189,7 +232,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 210504
---- !u!114 &-4013136208908542711
+--- !u!114 &-4809439545435339932
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -199,15 +242,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: 
-  Path: EATEOT/Build/Desktop/Master.bank
-  Name: Master
-  lastModified: 637517523855689447
+  Path: EATEOT/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  lastModified: 637520094500000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
---- !u!114 &-3702090421975278948
+--- !u!114 &-4134588283397518520
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -217,17 +260,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Red Weirdness
+  m_Name: parameter:/Blue Weirdness
   m_EditorClassIdentifier: 
-  Name: Red Weirdness
+  Name: Blue Weirdness
   Min: 0
   Max: 1
   Default: 0
   ID:
-    data1: 2108905912
-    data2: 2779935656
+    data1: 133283542
+    data2: 155475875
   Exists: 1
---- !u!114 &-3380362952953549054
+--- !u!114 &-2602526839093239675
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -287,6 +330,29 @@ MonoBehaviour:
     data1: 2476255808
     data2: 1332992834
   Exists: 1
+--- !u!114 &-1419471945308823461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Walking
+  m_EditorClassIdentifier: 
+  Path: event:/Walking
+  guid: 468086e946293c47b5738c1cc9ce21d0
+  Banks:
+  - {fileID: -4013136208908542711}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-1266390486964169467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,20 +383,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Level 1 Music
+  m_Name: event:/Level 2 Music
   m_EditorClassIdentifier: 
-  Path: event:/Level 1 Music
-  guid: 67f5e51823d4b34b9cb71690b34514b5
+  Path: event:/Level 2 Music
+  guid: 3e50f4c17dae724a8c6c3a6a3fd6383e
   Banks:
-  - {fileID: 8154396448865893230}
+  - {fileID: 853276005810638444}
   IsStream: 1
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 210504
---- !u!114 &-210650102919726279
+  Length: 171048
+--- !u!114 &-2176149517109359605
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -339,15 +405,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Spring
   m_EditorClassIdentifier: 
-  Path: ../../FMOD Studio/EATEOT/Build/Desktop/Master.bank
-  Name: Master
-  lastModified: 637505488866750804
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
+  Path: event:/Spring
+  guid: 78987a573af8e14cb632900cad2bb5b9
+  Banks:
+  - {fileID: 853276005810638444}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -361,51 +432,28 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 732462167106406658}
-  - {fileID: -4013136208908542711}
+  - {fileID: -4809439545435339932}
+  - {fileID: 853276005810638444}
   EditorEvents:
   - {fileID: 5879097338450415069}
-  - {fileID: 1959070459318548420}
-  - {fileID: 6148157877212409993}
-  - {fileID: 7294338528966281452}
-  - {fileID: -7179295434563347283}
-  - {fileID: 1465582917399281211}
-  - {fileID: -7142406531495575771}
-  - {fileID: 590302645400038300}
+  - {fileID: 5340344010620756091}
+  - {fileID: -1419471945308823461}
+  - {fileID: 7812338141658120568}
+  - {fileID: -5596285661764786517}
+  - {fileID: -6608665457790249480}
+  - {fileID: 9220939241505166415}
+  - {fileID: -9042018507149341014}
   EditorParameters:
   - {fileID: 4354807874370437225}
   - {fileID: 1275348099975914893}
   - {fileID: -2577048462072443858}
-  - {fileID: 2932991411058970341}
+  - {fileID: -6590694262051071968}
   MasterBanks:
-  - {fileID: -4013136208908542711}
+  - {fileID: 853276005810638444}
   StringsBanks:
-  - {fileID: 732462167106406658}
-  stringsBankWriteTime: 637517523855739484
+  - {fileID: -4809439545435339932}
+  stringsBankWriteTime: 637520094500000000
   cacheVersion: 5
---- !u!114 &590302645400038300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Spring Voiced
-  m_EditorClassIdentifier: 
-  Path: event:/Spring Voiced
-  guid: fb30b708b471944e9a682ebfb4c06a9f
-  Banks:
-  - {fileID: -4013136208908542711}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
 --- !u!114 &732462167106406658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -420,7 +468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: EATEOT/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 637517523855739484
+  lastModified: 637517536959823308
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -436,39 +484,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Red Weirdness
+  m_Name: parameter:/Green Weirdness
   m_EditorClassIdentifier: 
-  Name: Red Weirdness
+  Name: Green Weirdness
   Min: 0
   Max: 1
   Default: 0
   ID:
-    data1: 2108905912
-    data2: 2779935656
+    data1: 2476255808
+    data2: 1332992834
   Exists: 1
---- !u!114 &1465582917399281211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Dragging
-  m_EditorClassIdentifier: 
-  Path: event:/Dragging
-  guid: d70fcb33b9917a46ab7f0ec9f8f0128e
-  Banks:
-  - {fileID: -4013136208908542711}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
 --- !u!114 &1857427894353617533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,35 +506,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
-  Path: ../../FMOD Studio/EATEOTSounds/Build/Desktop/Master.bank
+  Path: EATEOT/Build/Desktop/Master.bank
   Name: Master
-  lastModified: 637501351631075635
+  lastModified: 637520094500000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
---- !u!114 &1959070459318548420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Level 2 Music
-  m_EditorClassIdentifier: 
-  Path: event:/Level 2 Music
-  guid: 3e50f4c17dae724a8c6c3a6a3fd6383e
-  Banks:
-  - {fileID: -4013136208908542711}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 171048
 --- !u!114 &2628897341314440108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -549,26 +551,6 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 948
-  Exists: 1
---- !u!114 &2932991411058970341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Physics Weirdness
-  m_EditorClassIdentifier: 
-  Name: Physics Weirdness
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2594294010
-    data2: 2733659213
   Exists: 1
 --- !u!114 &3336365838905661161
 MonoBehaviour:
@@ -630,6 +612,29 @@ MonoBehaviour:
     data1: 133283542
     data2: 155475875
   Exists: 1
+--- !u!114 &5340344010620756091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Level 2 Music
+  m_EditorClassIdentifier: 
+  Path: event:/Level 2 Music
+  guid: 3e50f4c17dae724a8c6c3a6a3fd6383e
+  Banks:
+  - {fileID: -4013136208908542711}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 171048
 --- !u!114 &5879097338450415069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -653,7 +658,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 210504
---- !u!114 &6148157877212409993
+--- !u!114 &7812338141658120568
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -663,55 +668,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Walking
+  m_Name: event:/Spring Voiced
   m_EditorClassIdentifier: 
-  Path: event:/Walking
-  guid: 468086e946293c47b5738c1cc9ce21d0
+  Path: event:/Spring Voiced
+  guid: fb30b708b471944e9a682ebfb4c06a9f
   Banks:
-  - {fileID: -4013136208908542711}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &6741415692084066471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Level 2 Music/Physics Weirdness
-  m_EditorClassIdentifier: 
-  Name: Physics Weirdness
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 0
---- !u!114 &7294338528966281452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Jumping
-  m_EditorClassIdentifier: 
-  Path: event:/Jumping
-  guid: 59b3a80671da344399ae03a575347784
-  Banks:
-  - {fileID: -4013136208908542711}
+  - {fileID: 853276005810638444}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -777,3 +739,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &9220939241505166415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Dragging
+  m_EditorClassIdentifier: 
+  Path: event:/Dragging
+  guid: d70fcb33b9917a46ab7f0ec9f8f0128e
+  Banks:
+  - {fileID: -4013136208908542711}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0

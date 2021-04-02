@@ -1,7 +1,76 @@
 fileFormatVersion: 2
 guid: ce6b0dca394ff4701b6ad94b29608f64
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 3383933443841994040
+    second: spr_friend_SCENE_1_0
+  - first:
+      213: 3563486088432547565
+    second: spr_friend_SCENE_1_1
+  - first:
+      213: -3363118834944307755
+    second: spr_friend_SCENE_1_2
+  - first:
+      213: 6317977112197571662
+    second: spr_friend_SCENE_1_3
+  - first:
+      213: 6162402805127031311
+    second: spr_friend_SCENE_1_4
+  - first:
+      213: 7507640046815424014
+    second: spr_friend_SCENE_1_5
+  - first:
+      213: 1062106519527183236
+    second: spr_friend_SCENE_1_6
+  - first:
+      213: 1763958038354430711
+    second: spr_friend_SCENE_1_7
+  - first:
+      213: 6552786757535342095
+    second: spr_friend_SCENE_1_8
+  - first:
+      213: -4611658010399037257
+    second: spr_friend_SCENE_1_9
+  - first:
+      213: 7177758261944805604
+    second: spr_friend_SCENE_1_10
+  - first:
+      213: 8849994548107767712
+    second: spr_friend_SCENE_1_11
+  - first:
+      213: 721905859810640238
+    second: spr_friend_SCENE_1_12
+  - first:
+      213: -5897203817141065081
+    second: spr_friend_SCENE_1_13
+  - first:
+      213: 8561768193062850673
+    second: spr_friend_SCENE_1_14
+  - first:
+      213: 3677169148841590918
+    second: spr_friend_SCENE_1_15
+  - first:
+      213: 9130002964918033401
+    second: spr_friend_SCENE_1_16
+  - first:
+      213: 3640265179409986227
+    second: spr_friend_SCENE_1_17
+  - first:
+      213: 9179134174199429282
+    second: spr_friend_SCENE_1_18
+  - first:
+      213: -1053259986685466607
+    second: spr_friend_SCENE_1_19
+  - first:
+      213: -1905137522356520187
+    second: spr_friend_SCENE_1_20
+  - first:
+      213: 1271581552423900017
+    second: spr_friend_SCENE_1_21
+  - first:
+      213: 4073385530946162489
+    second: spr_friend_SCENE_1_22
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +101,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -41,7 +110,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -68,7 +137,43 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -77,7 +182,490 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: spr_friend_SCENE_1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 22
+        height: 41
+      alignment: 9
+      pivot: {x: 0.52270883, y: 0.44882333}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83d24cfc98526fe20800000000000000
+      internalID: 3383933443841994040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE_1_1
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 0
+        width: 22
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5227089, y: 0.4381471}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de6711f97bb047130800000000000000
+      internalID: 3563486088432547565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE_1_2
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 0
+        width: 23
+        height: 41
+      alignment: 9
+      pivot: {x: 0.49565622, y: 0.4381471}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dd08b9fc3dc351d0800000000000000
+      internalID: -3363118834944307755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE_1_3
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 0
+        width: 25
+        height: 41
+      alignment: 9
+      pivot: {x: 0.45752594, y: 0.45291063}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e44a59f95b6fda750800000000000000
+      internalID: 6317977112197571662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE_1_4
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 27
+        height: 41
+      alignment: 9
+      pivot: {x: 0.42658657, y: 0.45395717}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0aa77293b0458550800000000000000
+      internalID: 6162402805127031311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE_1_5
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 0
+        width: 27
+        height: 41
+      alignment: 9
+      pivot: {x: 0.42658657, y: 0.45395717}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0e2eeb68de703860800000000000000
+      internalID: 7507640046815424014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE_1_6
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 0
+        width: 27
+        height: 41
+      alignment: 9
+      pivot: {x: 0.42658657, y: 0.45395717}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4835b02904c5dbe00800000000000000
+      internalID: 1062106519527183236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE_1_7
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 0
+        width: 27
+        height: 41
+      alignment: 9
+      pivot: {x: 0.42309117, y: 0.44935286}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fa8fc27d76da7810800000000000000
+      internalID: 1763958038354430711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE_1_8
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 0
+        width: 26
+        height: 41
+      alignment: 9
+      pivot: {x: 0.4419145, y: 0.45395717}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0e17cb76dc20fa50800000000000000
+      internalID: 6552786757535342095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE_1_9
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 0
+        width: 25
+        height: 41
+      alignment: 9
+      pivot: {x: 0.45846924, y: 0.45395717}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b8a49029791000c0800000000000000
+      internalID: -4611658010399037257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE_1_10
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 0
+        width: 25
+        height: 41
+      alignment: 9
+      pivot: {x: 0.46224487, y: 0.45395717}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e868de1c158c9360800000000000000
+      internalID: 7177758261944805604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE_1_11
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 0
+        width: 25
+        height: 41
+      alignment: 9
+      pivot: {x: 0.4660205, y: 0.44935286}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0af6b18f62f71da70800000000000000
+      internalID: 8849994548107767712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE_1_12
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 0
+        width: 26
+        height: 41
+      alignment: 9
+      pivot: {x: 0.43828523, y: 0.451655}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e61494ffd89b40a00800000000000000
+      internalID: 721905859810640238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE_1_13
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 0
+        width: 27
+        height: 41
+      alignment: 9
+      pivot: {x: 0.42309117, y: 0.45625928}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78aaa3f7f5ce82ea0800000000000000
+      internalID: -5897203817141065081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE_1_14
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 0
+        width: 27
+        height: 41
+      alignment: 9
+      pivot: {x: 0.42658713, y: 0.45625928}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 170dfb43fc281d670800000000000000
+      internalID: 8561768193062850673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE_1_15
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 0
+        width: 27
+        height: 41
+      alignment: 9
+      pivot: {x: 0.42309117, y: 0.45625928}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6808abfbbdde70330800000000000000
+      internalID: 3677169148841590918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE_1_16
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 0
+        width: 27
+        height: 41
+      alignment: 9
+      pivot: {x: 0.42658713, y: 0.45395717}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fbd332e25944be70800000000000000
+      internalID: 9130002964918033401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE_1_17
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 0
+        width: 27
+        height: 41
+      alignment: 9
+      pivot: {x: 0.42309117, y: 0.45395717}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b2b4fac4e1d48230800000000000000
+      internalID: 3640265179409986227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE_1_18
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 0
+        width: 26
+        height: 41
+      alignment: 9
+      pivot: {x: 0.44191566, y: 0.45625928}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a83ec6f5e5d26f70800000000000000
+      internalID: 9179134174199429282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE_1_19
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 0
+        width: 25
+        height: 41
+      alignment: 9
+      pivot: {x: 0.4622461, y: 0.45395717}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 118ea7d5f911261f0800000000000000
+      internalID: -1053259986685466607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE_1_20
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 0
+        width: 27
+        height: 41
+      alignment: 9
+      pivot: {x: 0.41933638, y: 0.45278335}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50bfbab64879f85e0800000000000000
+      internalID: -1905137522356520187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE_1_21
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 0
+        width: 25
+        height: 41
+      alignment: 9
+      pivot: {x: 0.46128175, y: 0.45278335}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1739a2f4fa095a110800000000000000
+      internalID: 1271581552423900017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_friend_SCENE_1_22
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 0
+        width: 23
+        height: 41
+      alignment: 9
+      pivot: {x: 0.49999735, y: 0.4557344}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93f03450f82978830800000000000000
+      internalID: 4073385530946162489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

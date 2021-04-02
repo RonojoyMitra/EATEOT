@@ -26677,8 +26677,12 @@ PrefabInstance:
       value: 49
       objectReference: {fileID: 0}
     - target: {fileID: 599982703268007160, guid: 961842518ad5ac54e9af78431e05f74f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 599982703268007160, guid: 961842518ad5ac54e9af78431e05f74f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -46.56
+      value: -45.4
       objectReference: {fileID: 0}
     - target: {fileID: 599982703268007160, guid: 961842518ad5ac54e9af78431e05f74f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -26763,11 +26767,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 599982703268007160, guid: 961842518ad5ac54e9af78431e05f74f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -46.56
+      value: -42.3
       objectReference: {fileID: 0}
     - target: {fileID: 599982703268007160, guid: 961842518ad5ac54e9af78431e05f74f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -36.46
+      value: -24.9
       objectReference: {fileID: 0}
     - target: {fileID: 599982703268007160, guid: 961842518ad5ac54e9af78431e05f74f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -27219,7 +27223,7 @@ GameObject:
   - component: {fileID: 2064273579}
   - component: {fileID: 2064273576}
   m_Layer: 0
-  m_Name: AudioManager
+  m_Name: Audio Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27261,7 +27265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetRed: 0
-  targertGreen: 0
+  targetGreen: 0
   targetBlue: 0
   currentRed: 0
   currentGreen: 0

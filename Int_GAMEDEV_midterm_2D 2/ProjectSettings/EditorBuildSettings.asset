@@ -5,28 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/MT/Scenes/MainMenuTest.unity
-    guid: 20d9cf738e1b85547859eb107e98955e
   - enabled: 1
     path: Assets/_MAIN/MainMenuTest 1.unity
     guid: 19414786b6b1abc4bb315e2e2de8bb83
   - enabled: 1
     path: Assets/MT/Scenes/BlackLoadingScreen.unity
     guid: 505ed9e14c836d24d919e459663d03e4
-  - enabled: 0
-    path: Assets/MT/Scenes/PlayerControllerTestScene.unity
-    guid: 79d554c145380a34cb254d4ecd805c81
-  - enabled: 0
-    path: Assets/OG_Scenes/scn_start.unity
-    guid: 3bc95707b01a34bf4901c0d8f93cc185
-  - enabled: 0
-    path: Assets/RM/Scenes/Experimental Stage1 Level-2.unity
-    guid: cd97b1a0ceafc9048aa79d1e62c4fac3
   - enabled: 1
-    path: Assets/RM/Scenes/Experimental Stage1 Level-1 1.unity
-    guid: ac91fcd2e8eced647a1bb4a074d6dbb6
+    path: Assets/_MAIN/Stage1.unity
+    guid: 5528f3fc3799b9f43a46f209fcf1401e
   - enabled: 1
-    path: Assets/RM/Scenes/Section1.unity
-    guid: ffd107e1443776b43946a49bc098cd4a
+    path: Assets/_MAIN/Stage2.unity
+    guid: 3c6ed2a95d4999348a2e50c104850108
   m_configObjects: {}
