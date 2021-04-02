@@ -64,7 +64,7 @@ public class CameraMovement : MonoBehaviour
         maxDeltaYNeg = memDYN;
         maxDeltaYPos = memDYP;
         
-        Debug.Log(perfectPosition);
+        //Debug.Log(perfectPosition);
         
         Vector3 pixelPosition = new Vector3(perfectPosition.x - (float)(perfectPosition.x%0.03125), perfectPosition.y - (float)(perfectPosition.y%0.03125), -10);
 
