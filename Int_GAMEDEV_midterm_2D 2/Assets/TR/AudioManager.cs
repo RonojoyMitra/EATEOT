@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using FMOD;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -22,6 +23,7 @@ public class AudioManager : MonoBehaviour
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Red Weirdness", currentRed);
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Green Weirdness", currentGreen);
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Blue Weirdness", currentBlue);
+        //Memory.Initialize(4, 2048, FMOD)
     }
 
     // Update is called once per frame
@@ -32,7 +34,6 @@ public class AudioManager : MonoBehaviour
             currentRed += 0.01f;
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Red Weirdness", currentRed);
         }
-        if (currentGreen < targetGreen)
         if (currentGreen < targetGreen)
         {
             currentGreen += 0.01f;
