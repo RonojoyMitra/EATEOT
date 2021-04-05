@@ -122,6 +122,8 @@ public class PlayerController : MonoBehaviour
         UpdateAnimationDirection();
 
         UpdateAnimationPushing();
+        
+        UpdateAnimationJumping();
     }
 
     void FixedUpdate()
@@ -587,6 +589,8 @@ public class PlayerController : MonoBehaviour
         // If the jump flag is set we set the jump state to holding and apply an impulse
         if (jumpStatus == JumpStatus.JUMP_FLAG)
         {
+            animator.SetTrigger("Jump");
+            
             /* Zero the velocity because the player can jump buffer and they may still technically have velocity from falling
              * We also need to zero the angular velocity just to be safe
              */
@@ -698,6 +702,8 @@ public class PlayerController : MonoBehaviour
 
     void UpdateAnimationPushing()
     {
+        animator.SetBool("Grabbing", grabbing);
+        
         if(!grabbing)
         {
             animator.SetInteger("Pushing", 0);
@@ -719,6 +725,16 @@ public class PlayerController : MonoBehaviour
             else
                 animator.SetInteger("Pushing", 2);
         }
+        else
+        {
+            animator.SetInteger("Pushing", 0);
+        }
+    }
+
+    void UpdateAnimationJumping()
+    {
+        animator.SetBool("Grounded", grounded);
+        animator.SetFloat("VerticalVelocity", rb.velocity.y);
     }
     #endregion
 

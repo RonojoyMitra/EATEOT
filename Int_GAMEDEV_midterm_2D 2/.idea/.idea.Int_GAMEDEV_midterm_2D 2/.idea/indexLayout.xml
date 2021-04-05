@@ -24,6 +24,7 @@
     <explicitExcludes>
       <Path>.idea</Path>
       <Path>.user</Path>
+      <Path>.vs</Path>
       <Path>.vscode</Path>
       <Path>EATEOT</Path>
       <Path>Library</Path>
