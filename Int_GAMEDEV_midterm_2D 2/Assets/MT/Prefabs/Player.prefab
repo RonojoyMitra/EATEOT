@@ -177,8 +177,8 @@ MonoBehaviour:
   maxWalkSpeed: 4
   grabbingWalkSpeedMulti: 0.5
   jumpStatus: 0
-  jumpInitialForce: 10
-  jumpHoldForce: 12
+  jumpInitialForce: 11
+  jumpHoldForce: 17
   coyoteTime: 0.15
   jumpBufferTime: 0.1
   leftGCOrigin: {x: -0.38, y: -0.501}
@@ -282,7 +282,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
