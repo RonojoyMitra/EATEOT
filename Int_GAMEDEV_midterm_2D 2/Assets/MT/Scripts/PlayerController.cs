@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static bool invertedGravity = false;
+    
     // Debugging options
     public enum DebugMode { OFF, DRAW_RAYS, DRAW_RAYS_WITH_DISTANCE };
     [SerializeField]
@@ -124,6 +126,9 @@ public class PlayerController : MonoBehaviour
         UpdateAnimationPushing();
         
         UpdateAnimationJumping();
+        
+        if(Input.GetKeyDown(KeyCode.P)) InvertGravity(true);
+        if(Input.GetKeyDown(KeyCode.O)) InvertGravity(false);
     }
 
     void FixedUpdate()
@@ -344,19 +349,48 @@ public class PlayerController : MonoBehaviour
          * This allows better accuracy as the player should be grounded as long as any part of their body is on the ground
          * This does mean that the player can not stand properly on a platform that is thinner than them.
          */
-        RaycastHit2D l = Physics2D.Raycast(rb.position + leftGCOrigin, Vector2.down, gcDistance);
-        RaycastHit2D r = Physics2D.Raycast(rb.position + rightGCOrigin, Vector2.down, gcDistance);
+        RaycastHit2D l, r;
+        Vector2 lo = new Vector2(leftGCOrigin.x, leftGCOrigin.y*-1f);
+        Vector2 ro = new Vector2(rightGCOrigin.x, rightGCOrigin.y*-1f);
+        if (invertedGravity)
+        {
+            l = Physics2D.Raycast(rb.position + lo, Vector2.up, gcDistance);
+            r = Physics2D.Raycast(rb.position + ro, Vector2.up, gcDistance);
+        }
+        else
+        {
+            l = Physics2D.Raycast(rb.position + leftGCOrigin, Vector2.down, gcDistance);
+            r = Physics2D.Raycast(rb.position + rightGCOrigin, Vector2.down, gcDistance);
+        }
 
         // If debugging is on we should draw the ground checking rays
         switch (debugMode)
         {
             case DebugMode.DRAW_RAYS:
-                Debug.DrawRay(rb.position + leftGCOrigin, Vector3.down, groundCheckColor);
-                Debug.DrawRay(rb.position + rightGCOrigin, Vector3.down, groundCheckColor);
+                if (invertedGravity)
+                {
+                    
+                    Debug.DrawRay(rb.position + lo, Vector3.up, groundCheckColor);
+                    Debug.DrawRay(rb.position + ro, Vector3.up, groundCheckColor);
+                }
+                else
+                {
+                    Debug.DrawRay(rb.position + leftGCOrigin, Vector3.down, groundCheckColor);
+                    Debug.DrawRay(rb.position + rightGCOrigin, Vector3.down, groundCheckColor);
+                }
                 break;
             case DebugMode.DRAW_RAYS_WITH_DISTANCE:
-                Debug.DrawRay(rb.position + leftGCOrigin, Vector3.down * gcDistance, groundCheckColor);
-                Debug.DrawRay(rb.position + rightGCOrigin, Vector3.down * gcDistance, groundCheckColor);
+                if (invertedGravity)
+                {
+                    Debug.DrawRay(rb.position + lo, Vector3.up * gcDistance, groundCheckColor);
+                    Debug.DrawRay(rb.position + ro, Vector3.up * gcDistance, groundCheckColor);
+                }
+                else
+                {
+                    
+                    Debug.DrawRay(rb.position + leftGCOrigin, Vector3.down * gcDistance, groundCheckColor);
+                    Debug.DrawRay(rb.position + rightGCOrigin, Vector3.down * gcDistance, groundCheckColor);
+                }
                 break;
         }
 
@@ -599,7 +633,14 @@ public class PlayerController : MonoBehaviour
             // We set that the jump flag was read and move the player into the holding status
             jumpStatus = JumpStatus.HOLDING;
             // Apply an impulse force to give the player an initial boost to their jump
-            rb.AddForce(Vector2.up * jumpInitialForce, ForceMode2D.Impulse);
+            if (invertedGravity)
+            {
+                rb.AddForce(Vector2.down * jumpInitialForce, ForceMode2D.Impulse);
+            }
+            else
+            {
+                rb.AddForce(Vector2.up * jumpInitialForce, ForceMode2D.Impulse);
+            }
             //FMODUnity.RuntimeManager.PlayOneShotAttached("Jumping", gameObject);
         }
         // If the player is still holding the jump key we can slow their fall by applying a force to them
@@ -772,6 +813,20 @@ public class PlayerController : MonoBehaviour
             if (tag == groundTags[i]) return true;
         }
         return false;
+    }
+
+    void InvertGravity(bool inv)
+    {
+        if (inv)
+        {
+            Physics2D.gravity = new Vector2(0,Mathf.Abs(Physics2D.gravity.y));
+            invertedGravity = true;
+        }
+        else
+        {
+            Physics2D.gravity = new Vector2(0,-1f*Mathf.Abs(Physics2D.gravity.y));
+            invertedGravity = false;
+        }
     }
     #endregion
 }

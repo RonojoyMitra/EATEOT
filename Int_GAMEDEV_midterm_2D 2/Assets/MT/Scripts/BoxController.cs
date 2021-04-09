@@ -123,18 +123,35 @@ public class BoxController : MonoBehaviour
     /// <returns>True if the box is on a valid object, and false otherwise.</returns>
     bool GroundCheck()
     {
+        Vector2 lo = new Vector2(leftGCOrigin.x, leftGCOrigin.y*-1f);
+        Vector2 ro = new Vector2(rightGCOrigin.x, rightGCOrigin.y*-1f);
+
         if(debugging)
         {
-            Debug.DrawRay(transform.position + (Vector3)leftGCOrigin, Vector2.down);
-            Debug.DrawRay(transform.position + (Vector3)rightGCOrigin, Vector2.down);
+            if (PlayerController.invertedGravity)
+            {
+                Debug.DrawRay(transform.position + (Vector3)lo, Vector2.up);
+                Debug.DrawRay(transform.position + (Vector3)ro, Vector2.up);
+            }
+            else
+            {
+                Debug.DrawRay(transform.position + (Vector3)leftGCOrigin, Vector2.down);
+                Debug.DrawRay(transform.position + (Vector3)rightGCOrigin, Vector2.down);
+            }
         }
 
         if(transform.parent != null)
            if(transform.parent.CompareTag("Player") == false)
                 transform.parent = null;
 
-        RaycastHit2D l = Physics2D.Raycast(rb.position + leftGCOrigin, Vector2.down, gcDistance);
-        RaycastHit2D r = Physics2D.Raycast(rb.position + rightGCOrigin, Vector2.down, gcDistance);
+        RaycastHit2D l, r;
+        if (PlayerController.invertedGravity)
+        {
+            l = Physics2D.Raycast(rb.position + lo, Vector2.up, gcDistance);
+            r = Physics2D.Raycast(rb.position + ro, Vector2.up, gcDistance);
+        }
+        l = Physics2D.Raycast(rb.position + leftGCOrigin, Vector2.down, gcDistance);
+        r = Physics2D.Raycast(rb.position + rightGCOrigin, Vector2.down, gcDistance);
 
         offLeft = l.collider == null ? true : false;
         offRight = r.collider == null ? true : false;
