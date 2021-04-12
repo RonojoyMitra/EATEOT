@@ -56,6 +56,8 @@ public class WeirdnessReader : MonoBehaviour
         RenderTexture.active = render;
         t.ReadPixels(new Rect(0, 0, 256, 256), 0, 0);
         t.Apply();
-        return t.GetPixel(x, y);
+        Color c = t.GetPixel(x, y);
+        Destroy(t);
+        return c;
     }
 }
