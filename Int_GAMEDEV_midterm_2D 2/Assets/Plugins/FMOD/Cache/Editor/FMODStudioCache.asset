@@ -139,6 +139,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: EATEOT/Build/Desktop/Master.bank
+  Name: Master
+  lastModified: 637517559810000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-3702090421975278948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Green Weirdness
   m_EditorClassIdentifier: 
@@ -227,8 +245,8 @@ MonoBehaviour:
   MasterBanks:
   - {fileID: -8758478857614737905}
   StringsBanks:
-  - {fileID: -4610616368299068642}
-  stringsBankWriteTime: 637530624682235025
+  - {fileID: 732462167106406658}
+  stringsBankWriteTime: 637517559810000000
   cacheVersion: 5
 --- !u!114 &1006566304523272632
 MonoBehaviour:
@@ -254,6 +272,44 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 0
 --- !u!114 &1477546094357997512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: EATEOT/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  lastModified: 637517559810000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &1275348099975914893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Red Weirdness
+  m_EditorClassIdentifier: 
+  Name: Red Weirdness
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2108905912
+    data2: 2779935656
+  Exists: 1
+--- !u!114 &1465582917399281211
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
