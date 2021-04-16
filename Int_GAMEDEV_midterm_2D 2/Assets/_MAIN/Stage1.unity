@@ -46670,7 +46670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollisionTag: 
-  Event: event:/test
+  Event: event:/Level 1 Showcase
   PlayEvent: 1
   StopEvent: 2
   AllowFadeout: 1
