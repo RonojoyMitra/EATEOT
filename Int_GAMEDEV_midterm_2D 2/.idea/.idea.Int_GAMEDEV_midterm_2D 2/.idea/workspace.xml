@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80ad93f5-d213-4d44-a7f6-6d7960f0fb0d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Int_GAMEDEV_midterm_2D 2/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Int_GAMEDEV_midterm_2D 2/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Int_GAMEDEV_midterm_2D 2/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Int_GAMEDEV_midterm_2D 2/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Int_GAMEDEV_midterm_2D 2/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Int_GAMEDEV_midterm_2D 2/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Int_GAMEDEV_midterm_2D 2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Int_GAMEDEV_midterm_2D 2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JR/Player Sprites/Falling Left.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JR/Player Sprites/Falling Left.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/JR/stage1tiles.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JR/stage1tiles.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/MT/Animation/Player/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MT/Animation/Player/Player.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MT/Animation/Player/Pulling_Left.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MT/Animation/Player/Pulling_Left.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MT/Animation/Player/Pulling_Right.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MT/Animation/Player/Pulling_Right.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MT/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MT/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MT/Scenes/PlayerControllerTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MT/Scenes/PlayerControllerTestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fmod_editor.log" beforeDir="false" afterPath="$PROJECT_DIR$/fmod_editor.log" afterDir="false" />
     </list>
@@ -42,6 +39,7 @@
       <option value="$PROJECT_DIR$/Assets/MT/Scripts/CameraMovement.cs" />
       <option value="$PROJECT_DIR$/Assets/MT/Scripts/WeirdnessReader.cs" />
       <option value="$PROJECT_DIR$/Assets/MT/Scripts/PlayerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/MT/Scripts/BoxController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1po3pEvrj8ewFvwWZ5svBxDrzbH" />
@@ -111,7 +109,9 @@
       <workItem from="1617369872082" duration="1475000" />
       <workItem from="1617371595609" duration="835000" />
       <workItem from="1617481719528" duration="1389000" />
-      <workItem from="1617646906542" duration="438000" />
+      <workItem from="1617646906542" duration="1938000" />
+      <workItem from="1617982921954" duration="1603000" />
+      <workItem from="1618589270957" duration="653000" />
     </task>
     <servers />
   </component>

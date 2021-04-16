@@ -624,6 +624,7 @@ public class PlayerController : MonoBehaviour
         if (jumpStatus == JumpStatus.JUMP_FLAG)
         {
             animator.SetTrigger("Jump");
+            Debug.Log("Jumping");
             
             /* Zero the velocity because the player can jump buffer and they may still technically have velocity from falling
              * We also need to zero the angular velocity just to be safe
