@@ -37,7 +37,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: EATEOT/Build/Desktop/Master.bank
   Name: Master
-  lastModified: 637529735513849069
+  lastModified: 637552335510000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -101,11 +101,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: EATEOT/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 637529735513869008
+  lastModified: 637552335510000000
   LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 1394
+  FileSizes: []
   Exists: 1
 --- !u!114 &-2840375638735966248
 MonoBehaviour:
@@ -228,7 +226,7 @@ MonoBehaviour:
   - {fileID: -8758478857614737905}
   StringsBanks:
   - {fileID: -4610616368299068642}
-  stringsBankWriteTime: 637529735513869008
+  stringsBankWriteTime: 637552335510000000
   cacheVersion: 5
 --- !u!114 &1006566304523272632
 MonoBehaviour:
