@@ -105,12 +105,16 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private FMOD.Studio.EventInstance walkInstance;
     [SerializeField] private FMOD.Studio.EventInstance dragInstance;
+    [FMODUnity.EventRef] public string walkEvent;
+    [FMODUnity.EventRef] public string dragEvent;
 
     private void Start()
     {
         instance = this;    // Set the singleton
         rb = GetComponent<Rigidbody2D>();   // Get reference to the rigidbody
         animator = GetComponent<Animator>();
+        walkInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Walking");
+        dragInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Dragging");
     }
 
     void Update()
@@ -187,6 +191,7 @@ public class PlayerController : MonoBehaviour
                 percentageMaxWalkSpeedToWalkAnimation * maxWalkSpeed)
             {
                 //walkInstance.start();
+                //FMODUnity.RuntimeManager.CreateInstance("event:/Walking");
                 animator.SetBool("Walking", true);
             }
             else

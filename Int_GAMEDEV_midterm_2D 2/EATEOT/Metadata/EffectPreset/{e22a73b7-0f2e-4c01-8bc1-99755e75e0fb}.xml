@@ -21,7 +21,7 @@
 			<value>1</value>
 		</property>
 		<property name="fftSize">
-			<value>4096</value>
+			<value>256</value>
 		</property>
 		<property name="overlap">
 			<value>1</value>

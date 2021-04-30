@@ -37,7 +37,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: EATEOT/Build/Desktop/Master.bank
   Name: Master
-  lastModified: 637553250175804033
+  lastModified: 637553587457609970
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -59,11 +59,11 @@ MonoBehaviour:
   - {fileID: -8758478857614737905}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 4581
+  Length: 9579
 --- !u!114 &-5418454295655068471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,7 +86,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 22484
+  Length: 460
 --- !u!114 &-4610616368299068642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,11 +101,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: EATEOT/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 637553250175824053
+  lastModified: 637553587457629980
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1394
+    Value: 1474
   Exists: 1
 --- !u!114 &-2840375638735966248
 MonoBehaviour:
@@ -129,7 +129,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 171048
+  Length: 196153
 --- !u!114 &-1954866401073656816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,6 +219,8 @@ MonoBehaviour:
   - {fileID: -9084745466044828121}
   - {fileID: 1477546094357997512}
   - {fileID: -2840375638735966248}
+  - {fileID: 3535549379767784970}
+  - {fileID: 8866444406693907352}
   EditorParameters:
   - {fileID: -1369632682846762037}
   - {fileID: 7021180277732521820}
@@ -228,7 +230,7 @@ MonoBehaviour:
   - {fileID: -8758478857614737905}
   StringsBanks:
   - {fileID: -4610616368299068642}
-  stringsBankWriteTime: 637553250175824053
+  stringsBankWriteTime: 637553587457629980
   cacheVersion: 5
 --- !u!114 &1006566304523272632
 MonoBehaviour:
@@ -299,6 +301,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 171048
+--- !u!114 &3535549379767784970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Menu Music
+  m_EditorClassIdentifier: 
+  Path: event:/Menu Music
+  guid: 63b21b5e2d06cd488603d477d0a8ec29
+  Banks:
+  - {fileID: -8758478857614737905}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 175000
 --- !u!114 &4571655824931316461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,7 +346,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 458
+  Length: 166
 --- !u!114 &5148811400751429701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,3 +410,26 @@ MonoBehaviour:
     data1: 2594294010
     data2: 2733659213
   Exists: 1
+--- !u!114 &8866444406693907352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/End Music
+  m_EditorClassIdentifier: 
+  Path: event:/End Music
+  guid: f42c911a69a89646b3613c56c19a675b
+  Banks:
+  - {fileID: -8758478857614737905}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0

@@ -38,6 +38,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/TR/AudioMaster.cs" />
+        <option value="$PROJECT_DIR$/Assets/MT/Scripts/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/TR/AudioManager.cs" />
       </list>
     </option>
   </component>
@@ -113,6 +115,7 @@
       <workItem from="1618589270957" duration="653000" />
       <workItem from="1619625418212" duration="831000" />
       <workItem from="1619671696393" duration="4514000" />
+      <workItem from="1619768018259" duration="6314000" />
     </task>
     <servers />
   </component>

@@ -18,6 +18,9 @@
 		</relationship>
 	</object>
 	<object class="PannerEffect" id="{fe9673c2-247e-4e2c-b223-a65d59ce9ffe}">
+		<property name="bypass">
+			<value>true</value>
+		</property>
 		<property name="overridingOutputFormat">
 			<value>1</value>
 		</property>
@@ -138,7 +141,7 @@
 			<value>-35</value>
 		</property>
 		<property name="curveShape">
-			<value>-1</value>
+			<value>-0.140627205</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{1c979a0e-a5bc-42f9-a620-4cf9ff736b0f}">
@@ -146,7 +149,7 @@
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>-11</value>
+			<value>-25</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{9ad52ede-7a8b-4c83-a727-76cd9285ea38}">
@@ -162,7 +165,7 @@
 			<value>0.35000000000000003</value>
 		</property>
 		<property name="value">
-			<value>-19</value>
+			<value>-24</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{906274a8-68bb-4078-9c0d-29874d60a1f3}">
@@ -197,7 +200,7 @@
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>-80</value>
+			<value>-30</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{449d7fad-fdc6-4b58-82ec-649644bd4de8}">

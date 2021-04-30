@@ -186,6 +186,7 @@
           <e p="AudioMaster.cs" t="Include" />
           <e p="CameraShifter.cs" t="Include" />
           <e p="PhysicsSoundShifter.cs" t="Include" />
+          <e p="SongLoader.cs" t="Include" />
           <e p="TempQuit.cs" t="Include" />
         </e>
       </e>
