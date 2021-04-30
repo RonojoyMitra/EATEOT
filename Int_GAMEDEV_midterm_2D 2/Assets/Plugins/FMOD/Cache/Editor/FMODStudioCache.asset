@@ -37,7 +37,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: EATEOT/Build/Desktop/Master.bank
   Name: Master
-  lastModified: 637553587457609970
+  lastModified: 637553621910470008
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -87,6 +87,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 460
+--- !u!114 &-4803907833541950405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/test 2
+  m_EditorClassIdentifier: 
+  Path: event:/test 2
+  guid: fdf2537e2025c04dbb2e28e55d0fad06
+  Banks:
+  - {fileID: -8758478857614737905}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 200532
 --- !u!114 &-4610616368299068642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,11 +124,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: EATEOT/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 637553587457629980
+  lastModified: 637553621910490024
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1474
+    Value: 1518
   Exists: 1
 --- !u!114 &-2840375638735966248
 MonoBehaviour:
@@ -221,6 +244,7 @@ MonoBehaviour:
   - {fileID: -2840375638735966248}
   - {fileID: 3535549379767784970}
   - {fileID: 8866444406693907352}
+  - {fileID: -4803907833541950405}
   EditorParameters:
   - {fileID: -1369632682846762037}
   - {fileID: 7021180277732521820}
@@ -230,7 +254,7 @@ MonoBehaviour:
   - {fileID: -8758478857614737905}
   StringsBanks:
   - {fileID: -4610616368299068642}
-  stringsBankWriteTime: 637553587457629980
+  stringsBankWriteTime: 637553621910490024
   cacheVersion: 5
 --- !u!114 &1006566304523272632
 MonoBehaviour:
@@ -323,7 +347,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 175000
+  Length: 216792
 --- !u!114 &4571655824931316461
 MonoBehaviour:
   m_ObjectHideFlags: 0
