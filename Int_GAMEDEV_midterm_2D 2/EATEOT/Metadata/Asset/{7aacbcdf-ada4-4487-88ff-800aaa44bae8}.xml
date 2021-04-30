@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="EncodableAsset" id="{7aacbcdf-ada4-4487-88ff-800aaa44bae8}">
+		<property name="assetPath">
+			<value>SFX/Drag/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b5ed2c4b-0dc4-4bc3-b404-8780a1ed1787}</destination>
+		</relationship>
+	</object>
+</objects>

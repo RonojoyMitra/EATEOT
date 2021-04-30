@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{86fd8798-9e9f-4d22-ba91-14a0ab7fe97f}">
+		<property name="assetPath">
+			<value>Noise Tools/Bass drone  13 - A#.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>4</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b5ed2c4b-0dc4-4bc3-b404-8780a1ed1787}</destination>
+		</relationship>
+	</object>
+</objects>

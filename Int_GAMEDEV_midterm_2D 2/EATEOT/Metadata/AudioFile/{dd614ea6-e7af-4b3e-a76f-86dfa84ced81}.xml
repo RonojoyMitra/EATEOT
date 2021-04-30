@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{dd614ea6-e7af-4b3e-a76f-86dfa84ced81}">
+		<property name="assetPath">
+			<value>SFX/Drag/Impact Body Drag Through Rock Salt Long 01.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>4.54725</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{b5ed2c4b-0dc4-4bc3-b404-8780a1ed1787}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -37,7 +37,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: EATEOT/Build/Desktop/Master.bank
   Name: Master
-  lastModified: 637529735513849069
+  lastModified: 637553250175804033
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -63,7 +63,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 4581
 --- !u!114 &-5418454295655068471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,13 +80,13 @@ MonoBehaviour:
   guid: 739f874f2872f942b644b11c3665383d
   Banks:
   - {fileID: -8758478857614737905}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 22484
 --- !u!114 &-4610616368299068642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: EATEOT/Build/Desktop/Master.strings.bank
   Name: Master.strings
-  lastModified: 637529735513869008
+  lastModified: 637553250175824053
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -228,7 +228,7 @@ MonoBehaviour:
   - {fileID: -8758478857614737905}
   StringsBanks:
   - {fileID: -4610616368299068642}
-  stringsBankWriteTime: 637529735513869008
+  stringsBankWriteTime: 637553250175824053
   cacheVersion: 5
 --- !u!114 &1006566304523272632
 MonoBehaviour:
@@ -321,7 +321,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 458
 --- !u!114 &5148811400751429701
 MonoBehaviour:
   m_ObjectHideFlags: 0
