@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,6 +23,14 @@ public class SceneController : MonoBehaviour
         DontDestroyOnLoad(gameObject);  // Mark this object to not destroy on load
         animator = GetComponent<Animator>();    // Get reference to the animator
         blackout = GetComponentInChildren<Image>(); // Get reference to the blackout image
+    }
+
+    private void Update()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
     }
 
     /// <summary>
