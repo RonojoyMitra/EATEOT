@@ -88,7 +88,7 @@
 	</object>
 	<object class="EventMixerMaster" id="{63a3d609-afbd-4133-99e6-c8ddebd1f666}">
 		<property name="volume">
-			<value>-10.5</value>
+			<value>-15</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{5b4ffff6-80c6-4829-b374-b9056443e8b8}</destination>
@@ -111,6 +111,9 @@
 		<property name="length">
 			<value>0.16600000000000001</value>
 		</property>
+		<property name="pitch">
+			<value>8.5</value>
+		</property>
 		<relationship name="modulators">
 			<destination>{5771867f-3ae3-4b61-882b-c14cfead67ce}</destination>
 		</relationship>
@@ -119,6 +122,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{4cda4d64-cdb6-4544-8906-17ffa34c4094}">
+		<property name="volume">
+			<value>-5</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -145,20 +151,37 @@
 			<value>pitch</value>
 		</property>
 		<property name="amount">
-			<value>2</value>
+			<value>11.5</value>
 		</property>
 	</object>
 	<object class="MixerBusEffectChain" id="{94574218-d5f6-4ebb-a5c3-5f6a681e06c9}">
 		<relationship name="effects">
 			<destination>{b040a9f6-9d1a-4dd6-9420-e5bd0324fe7b}</destination>
+			<destination>{cf529dfe-e972-4133-8d09-bbdb3f82f087}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{8103dce4-2f6a-44db-bde8-def79232b85a}" />
 	<object class="MixerBusFader" id="{93915370-89cc-4f1e-8caf-d9f7692441a2}" />
 	<object class="SFXReverbEffect" id="{b10b1135-9aa4-4a6e-9117-8c1e10ef50fe}">
 		<property name="decayTime">
-			<value>8000</value>
+			<value>20000</value>
+		</property>
+		<property name="lowShelfGain">
+			<value>2</value>
+		</property>
+		<property name="highCut">
+			<value>2900</value>
+		</property>
+		<property name="earlyLateMix">
+			<value>58</value>
+		</property>
+		<property name="wetLevel">
+			<value>1.5</value>
+		</property>
+		<property name="dryLevel">
+			<value>-5.5</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{b040a9f6-9d1a-4dd6-9420-e5bd0324fe7b}" />
+	<object class="PitchShifterEffect" id="{cf529dfe-e972-4133-8d09-bbdb3f82f087}" />
 </objects>

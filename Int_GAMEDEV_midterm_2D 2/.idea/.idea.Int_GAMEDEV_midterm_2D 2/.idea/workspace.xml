@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80ad93f5-d213-4d44-a7f6-6d7960f0fb0d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Int_GAMEDEV_midterm_2D 2/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Int_GAMEDEV_midterm_2D 2/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Int_GAMEDEV_midterm_2D 2/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Int_GAMEDEV_midterm_2D 2/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Int_GAMEDEV_midterm_2D 2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Int_GAMEDEV_midterm_2D 2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JR/Player Sprites/Falling Left.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JR/Player Sprites/Falling Left.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/JR/stage1tiles.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/JR/stage1tiles.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MT/Animation/Player/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MT/Animation/Player/Player.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MT/Scenes/PlayerControllerTestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MT/Scenes/PlayerControllerTestScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Resources/FMODStudioSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MT/Scripts/SceneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MT/Scripts/SceneController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fmod_editor.log" beforeDir="false" afterPath="$PROJECT_DIR$/fmod_editor.log" afterDir="false" />
     </list>
@@ -35,13 +35,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/TR/TempQuit.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/Assets/TR/AudioMaster.cs" />
-        <option value="$PROJECT_DIR$/Assets/MT/Scripts/PlayerController.cs" />
-        <option value="$PROJECT_DIR$/Assets/TR/AudioManager.cs" />
-      </list>
-    </option>
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/MT/Scripts/SceneController.cs" />
+      <option value="$PROJECT_DIR$/Assets/MT/Scripts/PauseMenu.cs" />
+    </changedPaths>
   </component>
   <component name="ProjectId" id="1po3pEvrj8ewFvwWZ5svBxDrzbH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -79,7 +76,7 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="selectedOptions">
-        <set />
+        <list />
       </option>
       <method v="2" />
     </configuration>
@@ -88,7 +85,7 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="selectedOptions">
-        <set />
+        <list />
       </option>
       <method v="2" />
     </configuration>
@@ -116,6 +113,7 @@
       <workItem from="1619625418212" duration="831000" />
       <workItem from="1619671696393" duration="4514000" />
       <workItem from="1619768018259" duration="6314000" />
+      <workItem from="1620163143909" duration="703000" />
     </task>
     <servers />
   </component>
