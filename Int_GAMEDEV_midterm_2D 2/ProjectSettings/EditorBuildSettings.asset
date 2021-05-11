@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/_MAIN/MainMenuTest 1.unity
     guid: 19414786b6b1abc4bb315e2e2de8bb83
+  - enabled: 1
+    path: Assets/BY/Scenes/Final_Scenes/MainMenu_.unity
+    guid: b5280db9bec1b41d29526ce007858207
   - enabled: 1
     path: Assets/MT/Scenes/BlackLoadingScreen.unity
     guid: 505ed9e14c836d24d919e459663d03e4
